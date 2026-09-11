@@ -24,7 +24,7 @@ export const INITIAL_PORTFOLIO_DATA_ID: PortfolioData = {
     phone: '+62858 1317 7600',
     domicile: 'Tangerang Selatan, Banten, Indonesia',
     github: 'https://github.com/affandiagung',
-    linkedin: 'https://linkedin.com/in/affandi-agung-laksono',
+    linkedin: 'linkedin.com/in/affandi-agung',
     portfolioUrl: 'https://affandiagung.github.io/',
     openToRelocation: 'Terbuka untuk relokasi di seluruh wilayah Indonesia maupun internasional (ASEAN, Jepang, UEA)'
   },

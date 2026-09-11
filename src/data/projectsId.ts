@@ -12,17 +12,17 @@ export const PROJECTS_DATA_ID: Project[] = [
   {
     id: 'bakti-oss',
     title: 'BAKTI OSS (Operational Support System)',
-    subtitle: 'Pemantauan infrastruktur telekomunikasi dan pelaporan KPI operasional untuk 10.000+ lokasi BTS di seluruh Indonesia',
+    subtitle: 'Pemantauan infrastruktur telekomunikasi dan pelaporan KPI operasional untuk 10.000+ lokasi BTS (Base Transceiver Station) di seluruh Indonesia',
     category: 'backend',
     flag: 'Install & Cloud',
     badge: 'Enterprise Telekomunikasi',
     status: 'Pemeliharaan & pengembangan berkelanjutan',
-    businessPurpose: 'Digunakan oleh BAKTI Kominfo (Badan Aksesibilitas Telekomunikasi dan Informasi) untuk mengelola dan memantau kegiatan operasional proyek telekomunikasi di Indonesia.',
+    businessPurpose: 'Digunakan oleh BAKTI Kominfo  untuk mengelola dan memantau kegiatan operasional proyek telekomunikasi di Indonesia.',
     role: ['Pengembang Backend'],
-    problem: '10.000+ lokasi BTS di seluruh Indonesia menghasilkan volume data telemetri yang sangat besar dari sumber-sumber yang bervariasi (API, FTP, SFTP, CSV, Excel, dan file log). Format yang tidak konsisten dan skala data yang masif membuat pelaporan real-time, ekspor file Excel, dan penyesuaian kebutuhan mingguan dari user menjadi sangat menantang.',
+    problem: '10.000+ lokasi BTS (Base Transceiver Station) di seluruh Indonesia menghasilkan volume data telemetri yang sangat besar dari sumber-sumber yang bervariasi (API, FTP, SFTP, CSV, Excel, dan file log). Format yang tidak konsisten dan skala data yang masif membuat pelaporan real-time, ekspor file Excel, dan penyesuaian kebutuhan mingguan dari user menjadi sangat menantang.',
     solution: 'Membangun backend ingestion dan agregasi data berkinerja tinggi menggunakan Python, Go, dan Javascript (NodeJS). Mempartisi tabel database PostgreSQL dengan materialized view, menerapkan antrean worker BullMQ, serta menghangatkan lapisan cache Redis untuk query KPI berkecepatan sub-detik.',
     technicalChallenges: [
-      '10.000+ BTS di seluruh Indonesia menghasilkan data dari API, FTP, SFTP, CSV, Excel, dan file log',
+      '10.000+ BTS (Base Transceiver Station) di seluruh Indonesia menghasilkan data dari API, FTP, SFTP, CSV, Excel, dan file log',
       'Format data yang tidak konsisten memerlukan parsing, validasi, dan normalisasi ekstensif',
       'Volume data skala besar membuat pelaporan real-time dan ekspor Excel membebani komputasi',
       'Alur kerja pemeliharaan memerlukan otomatisasi pembuatan tiket, persetujuan, notifikasi, dan penutupan tiket',
@@ -44,7 +44,7 @@ export const PROJECTS_DATA_ID: Project[] = [
     ],
     stack: ['Python', 'Golang', 'NestJS', 'TypeScript', 'PostgreSQL', 'MongoDB', 'Redis', 'BullMQ', 'Worker', 'Nginx', 'PM2', 'Ubuntu Server'],
     architecture: {
-      flowDescription: 'Data mengalir dari 10.000+ pemantau BTS jarak jauh melalui worker pemrosesan ke tabel PostgreSQL berpartisi, dihangatkan ke cache Redis, dan disajikan melalui REST API teroptimasi ke dashboard administratif.',
+      flowDescription: 'Data mengalir dari 10.000+ pemantau BTS (Base Transceiver Station) jarak jauh melalui worker pemrosesan ke tabel PostgreSQL berpartisi, dihangatkan ke cache Redis, dan disajikan melalui REST API teroptimasi ke dashboard administratif.',
       steps: [
         { title: 'Lokasi BTS Edge', desc: '10.000+ pemantau telekomunikasi jarak jauh mentransmisikan data telemetri mentah', tag: 'Sumber Data' },
         { title: 'Pipeline Data', desc: 'Job Python, Javascript (NodeJS), dan Go memproses dan memvalidasi data FTP, SFTP, CSV, Excel, dan log, lalu mengagregasi KPI interval 15 menit hingga bulanan', tag: 'Pemrosesan' },
@@ -616,29 +616,29 @@ export const PROJECTS_DATA_ID: Project[] = [
     businessPurpose: 'Platform digital untuk memperkenalkan Suka Village sebagai destinasi hospitality unggulan yang menyediakan akomodasi villa, restoran kuliner, aktivitas rekreasi, serta paket event (wedding, gathering perusahaan, dan retret keluarga).',
     role: ['Project Lead', 'Pengembang Full-Stack'],
     problem: 'Suka Village membutuhkan kehadiran digital yang elegan dan modern untuk menyatukan katalog vila penginapan, menu kuliner restoran, pilihan aktivitas wisata, dan konsultasi event ke dalam satu wadah web yang memikat.',
-    solution: 'Merancang dan membangun platform web full-stack menggunakan Vue.js untuk antarmuka interaktif dan Express.js untuk backend REST API, dilengkapi katalog atraktif dan formulir pengajuan pemesanan.',
+    solution: 'Mengembangkan platform web full-stack menggunakan React dan Vite untuk sisi frontend serta Express.js untuk backend REST API, dilengkapi katalog interaktif dan formulir inquiry.',
     technicalChallenges: [
       'Menyusun hierarki konten yang kaya meliputi vila akomodasi, restoran, aktivitas outdoor, dan event',
       'Memastikan pengiriman aset media visual tetap ringan dan transisi komponen mulus di perangkat seluler',
       'Merancang API backend yang fleksibel dan siap untuk integrasi sistem booking dan pembayaran langsung'
     ],
     keyContributions: [
-      'Mengembangkan aplikasi frontend menggunakan Vue.js dengan arsitektur berbasis komponen',
+      'Mengembangkan aplikasi frontend menggunakan React dan Vite dengan arsitektur berbasis komponen',
       'Membangun layanan backend dan REST API dengan Express.js untuk distribusi konten destinasi',
       'Merancang tata letak responsif untuk katalog vila, menu kuliner, dan paket acara',
       'Melakukan deployment build pratinjau dan produksi di Vercel untuk evaluasi pemangku kepentingan'
     ],
     metrics: [
-      { label: 'Stack Frontend', value: 'Vue.js', desc: 'Klien berbasis komponen dinamis' },
+      { label: 'Stack Frontend', value: 'ReactJS', desc: 'Klien berbasis komponen dinamis' },
       { label: 'API Backend', value: 'Express.js', desc: 'Layanan REST yang ringan dan cepat' },
       { label: 'Cakupan Destinasi', value: 'Hospitality', desc: 'Penginapan, kuliner, dan event retret' },
       { label: 'Status Proyek', value: 'Pengembangan', desc: 'Showcase web live di Vercel' }
     ],
     stack: ['ReactJS', 'Typescript', 'TailwindCSS', 'ExpressJS', 'Supabase', 'Vite'],
     architecture: {
-      flowDescription: 'Platform Suka Village menggunakan arsitektur full-stack dengan frontend Vue.js yang berkomunikasi dengan backend Express.js melalui REST API untuk menyajikan katalog destinasi interaktif.',
+      flowDescription: 'Platform Suka Village menggunakan arsitektur full-stack dengan frontend ReactJS yang berkomunikasi dengan backend Express.js melalui REST API untuk menyajikan katalog destinasi interaktif.',
       steps: [
-        { title: 'Frontend Vue.js', desc: 'Menyediakan website interaktif yang menampilkan info akomodasi, menu resto, aktivitas, dan paket acara', tag: 'Frontend' },
+        { title: 'Frontend ReactJS', desc: 'Menyediakan website interaktif yang menampilkan info akomodasi, menu resto, aktivitas, dan paket acara', tag: 'Frontend' },
         { title: 'Backend Express.js', desc: 'Menyediakan layanan backend dan REST API untuk konten destinasi dan alur formulir reservasi', tag: 'Backend' },
         { title: 'Gateway REST API', desc: 'Menghubungkan komponen antarmuka dengan layanan backend dan data terstruktur', tag: 'API' }
       ]

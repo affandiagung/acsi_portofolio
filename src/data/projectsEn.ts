@@ -12,17 +12,17 @@ export const PROJECTS_DATA_EN: Project[] = [
   {
     id: 'bakti-oss',
     title: 'BAKTI OSS (Operational Support System)',
-    subtitle: 'Telecom infrastructure monitoring and operational KPI reporting for 10,000+ BTS sites across Indonesia',
+    subtitle: 'Telecom infrastructure monitoring and operational KPI reporting for 10,000+ BTS (Base Transceiver Station) sites across Indonesia',
     category: 'backend',
     flag: 'Install & Cloud',
     badge: 'Enterprise Telecom',
     status: 'Continuously maintained / enhanced',
-    businessPurpose: 'Used by BAKTI Kominfo (Telecommunications and Information Accessibility Agency) to manage and monitor operational activities of telecommunication projects across Indonesia.',
+    businessPurpose: 'Used by BAKTI Kominfo  to manage and monitor operational activities of telecommunication projects across Indonesia.',
     role: ['Backend Developer'],
-    problem: '10,000+ remote BTS sites across Indonesia generated large volumes of telemetry data from inconsistent sources (APIs, FTP, SFTP, CSV, Excel, and log files). Inconsistent formats and sheer scale made real-time reporting, Excel exports, and weekly user requirement changes extremely challenging.',
+    problem: '10,000+ remote BTS (Base Transceiver Station) sites across Indonesia generated large volumes of telemetry data from inconsistent sources (APIs, FTP, SFTP, CSV, Excel, and log files). Inconsistent formats and sheer scale made real-time reporting, Excel exports, and weekly user requirement changes extremely challenging.',
     solution: 'Engineered a scalable data ingestion and aggregation backend using Python, Go, and Javascript (NodeJS). Partitioned PostgreSQL tables with materialized views, implemented BullMQ worker queues, and warmed a Redis cache layer for sub-second KPI queries.',
     technicalChallenges: [
-      '10,000+ BTS across Indonesia generated data from APIs, FTP, SFTP, CSV, Excel, and log files',
+      '10,000+ BTS (Base Transceiver Station) sites across Indonesia generated data from APIs, FTP, SFTP, CSV, Excel, and log files',
       'Inconsistent data formats required extensive parsing, validation, and normalization',
       'Large-scale data volume made real-time reporting and Excel exports computationally heavy',
       'Maintenance workflows required automated ticketing, approvals, notifications, and ticket closure',
@@ -605,29 +605,29 @@ export const PROJECTS_DATA_EN: Project[] = [
     businessPurpose: 'Digital platform showcasing Suka Village as a premier hospitality destination providing boutique accommodations, restaurant dining, outdoor activities, and event packages (weddings, corporate retreats, gatherings).',
     role: ['Project Lead', 'Full-Stack Developer'],
     problem: 'Suka Village needed an elegant, modern digital presence to unify its accommodation villas, restaurant dining menu, curated recreational activities, and event inquiries into a cohesive, user-friendly platform.',
-    solution: 'Architected and developed a full-stack web platform utilizing Vue.js for the dynamic frontend client and Express.js for the REST API backend service, featuring interactive catalogs and inquiry forms.',
+    solution: 'Developed a full-stack web platform with React and Vite for the frontend and Express.js for the REST API backend, featuring interactive catalogs and inquiry forms.',
     technicalChallenges: [
       'Structuring rich content hierarchies across accommodations, dining, outdoor experiences, and events',
       'Ensuring responsive media delivery and smooth component transitions on mobile devices',
       'Designing extensible backend APIs prepared for upcoming direct booking and reservation integrations'
     ],
     keyContributions: [
-      'Developed the frontend application using Vue.js with component-driven architecture',
+      'Developed the frontend application using React and Vite with component-driven architecture',
       'Engineered backend services and REST APIs with Express.js for content delivery',
       'Designed responsive catalog views for villa suites, dining menus, and event packages',
       'Deployed preview and production builds on Vercel for stakeholder reviews'
     ],
     metrics: [
-      { label: 'Frontend Stack', value: 'Vue.js', desc: 'Responsive component-based client' },
+      { label: 'Frontend Stack', value: 'ReactJS', desc: 'Responsive component-based client' },
       { label: 'Backend API', value: 'Express.js', desc: 'Lightweight REST services' },
       { label: 'Platform Scope', value: 'Hospitality', desc: 'Stays, dining, and retreat events' },
       { label: 'Status', value: 'Active Dev', desc: 'Live web deployment on Vercel' }
     ],
     stack: ['ReactJS', 'Typescript', 'TailwindCSS', 'ExpressJS', 'Supabase', 'Vite'],
     architecture: {
-      flowDescription: 'The Suka Village platform uses a full-stack architecture with a Vue.js frontend communicating with an Express.js backend through REST APIs to serve dynamic destination catalogs.',
+      flowDescription: 'The Suka Village platform uses a full-stack architecture with a ReactJS frontend communicating with an Express.js backend through REST APIs to serve dynamic destination catalogs.',
       steps: [
-        { title: 'Vue.js Frontend', desc: 'Provides the user-facing website presenting accommodation, dining, activity, and event information', tag: 'Frontend' },
+        { title: 'ReactJS Frontend', desc: 'Provides the user-facing website presenting accommodation, dining, activity, and event information', tag: 'Frontend' },
         { title: 'Express.js Backend', desc: 'Provides backend services and REST APIs for destination content and inquiry workflows', tag: 'Backend' },
         { title: 'REST API Gateway', desc: 'Connects frontend components with backend services and structured data', tag: 'API' }
       ]

@@ -27,7 +27,7 @@ export const INITIAL_PORTFOLIO_DATA_EN: PortfolioData = {
     phone: '+62858 1317 7600',
     domicile: 'South Tangerang, Banten, Indonesia',
     github: 'https://github.com/affandiagung',
-    linkedin: 'https://linkedin.com/in/affandi-agung-laksono',
+    linkedin: 'linkedin.com/in/affandi-agung',
     portfolioUrl: 'https://affandiagung.github.io/',
     openToRelocation: 'Open to relocation across Indonesia and internationally'
   },
@@ -357,7 +357,7 @@ CMD ["uvicorn", "main:app", "--host", "0.0.0.0", "--port", "8000", "--workers", 
         { name: 'Nginx & Reverse Proxy', highlight: true },
         { name: 'CI/CD (GitLab, GitHub Actions)', highlight: true },
         { name: 'AWS & Cloud Hosting', highlight: true },
-        { name: 'Windows Server & On-Premise', highlight: false },
+        { name: 'Windows Server & On-Premise', highlight: true},
         { name: 'Git & Version Control', highlight: true }
       ]
     }

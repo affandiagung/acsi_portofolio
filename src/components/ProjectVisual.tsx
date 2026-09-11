@@ -405,7 +405,7 @@ export const ProjectVisual: React.FC<ProjectVisualProps> = ({ project, mode = 't
           <div className="my-auto grid grid-cols-3 gap-2 py-1">
             <div className="p-2 rounded bg-slate-900/80 border border-emerald-900/40 text-center">
               <div className="text-sm font-bold text-white">10K+</div>
-              <div className="text-[8px] text-slate-400">Live BTS Sites</div>
+              <div className="text-[8px] text-slate-400">Live BTS (Base Transceiver Station) Sites</div>
             </div>
             <div className="p-2 rounded bg-slate-900/80 border border-emerald-900/40 text-center">
               <div className="text-sm font-bold text-emerald-400">15 min</div>
