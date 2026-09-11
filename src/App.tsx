@@ -5,7 +5,6 @@ import { ThemeProvider } from './context/ThemeContext';
 import { LanguageProvider, useLanguage } from './context/LanguageContext';
 import { Navbar } from './components/Navbar';
 import { Hero } from './components/Hero';
-import { StatsBar } from './components/StatsBar';
 import { Projects } from './components/Projects';
 import { Methodology } from './components/Methodology';
 import { TechStack } from './components/TechStack';
@@ -108,7 +107,6 @@ function MainAppContent() {
           data={data}
           onOpenTerminal={() => setIsTerminalOpen(true)}
         />
-        <StatsBar data={data} />
         <Projects data={data} />
         <Methodology />
         <TechStack data={data} />

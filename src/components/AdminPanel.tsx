@@ -656,6 +656,27 @@ export const AdminPanel: React.FC<AdminPanelProps> = ({ data, onUpdateData, onEx
                     />
                   </div>
 
+                  <div>
+                    <div className="flex items-center justify-between mb-1">
+                      <label className="block text-slate-300 text-xs font-mono">
+                        Image URL / Local Asset Path
+                      </label>
+                      <span className="text-[10px] text-emerald-400 font-mono">
+                        contoh: /assets/projects/nama-file.png
+                      </span>
+                    </div>
+                    <input
+                      type="text"
+                      value={editingProject.imageUrl || ''}
+                      onChange={(e) => setEditingProject({ ...editingProject, imageUrl: e.target.value })}
+                      placeholder="/assets/projects/my-project.png atau https://..."
+                      className="w-full p-2 rounded bg-slate-950 border border-slate-800 text-white text-xs font-mono"
+                    />
+                    <p className="text-[11px] text-slate-400 mt-1">
+                      Simpan file gambar di folder <code className="text-emerald-300">public/assets/projects/</code> lalu masukkan path <code className="text-emerald-300">/assets/projects/nama-file.png</code>.
+                    </p>
+                  </div>
+
                   <div className="pt-3 border-t border-slate-800 flex justify-end gap-2">
                     <button
                       onClick={() => setEditingProject(null)}

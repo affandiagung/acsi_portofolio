@@ -12,12 +12,13 @@ export const INITIAL_PORTFOLIO_DATA_ID: PortfolioData = {
       'Pengembangan Website & SaaS',
       'Instalasi Software Cloud & VPS',
       'Pemeliharaan Software Produksi',
-      'Optimasi Database & API'
+      'Optimasi Database & API',
+      'Dasbor Pemantauan Real-Time'
     ],
     aboutStory: [
-      'Saya adalah Software Engineer dengan pengalaman luas dalam membangun dan memelihara sistem enterprise, aplikasi web, deployment server cloud, dan pipeline AI.',
-      'Kompetensi inti saya mencakup 4 pilar utama: sistem Enterprise Resource Planning (ERP), pengembangan website & SaaS modern, instalasi perangkat lunak cloud/VPS (AWS & IDCloudHost), serta pemeliharaan produksi, perbaikan bug & troubleshooting berkelanjutan.',
-      'Baik dalam mengoptimalkan performa database, menangani change request (CR) dari klien, maupun men-deploy aplikasi dalam container dengan Nginx dan SSL, saya menghadirkan solusi stabil berstandar produksi dengan keandalan tinggi.'
+      "Saya seorang Software Engineer dengan pengalaman dalam membangun dan memelihara aplikasi web, sistem backend, serta aplikasi berbasis AI.",
+      "Fokus utama saya adalah pengembangan backend, dengan pengalaman dalam membangun API, mengelola database, melakukan deployment ke cloud, dan mengintegrasikan berbagai sistem.",
+      "Saya terbiasa menyelesaikan masalah teknis, meningkatkan performa sistem, dan membangun aplikasi yang stabil serta dapat digunakan untuk kebutuhan nyata."
     ],
     email: 'ccoc.20001@gmail.com',
     phone: '+62858 1317 7600',
@@ -220,7 +221,7 @@ def process_telemetry_job(job_payload):
         'Chunking kontekstual mempertahankan nomor pasal, ayat, dan hierarki dokumen hukum perpajakan',
         'Model Cross-Encoder Reranker menilai ulang potongan dokumen paling relevan sebelum diserahkan ke prompt LLM',
         'Instruksi system prompt ketat melarang jawaban spekulatif di luar korpus dokumen rujukan resmi',
-        'Sitasi nomor pasal yang dapat diverifikasi langsung oleh pengguna untuk audit kepatuhan hukum'
+        'Sitasi nomor pasal yang dapat diverifikasi langsung oleh user untuk audit kepatuhan hukum'
       ],
       codeSnippet: {
         language: 'python',
@@ -246,77 +247,68 @@ def hybrid_retrieve(query: str, top_k: int = 5):
   ],
   techStack: [
     {
-      category: 'Bahasa Pemrograman & Runtime Backend',
-      description: 'Bahasa utama yang saya gunakan sehari-hari untuk merancang logika bisnis, API berkecepatan tinggi, dan automasi sistem.',
+      category: 'Bahasa & Framework Backend',
+      description: 'Lingkungan runtime utama untuk API berperforma tinggi dan background worker',
       skills: [
-        { name: 'Python', highlight: true },
-        { name: 'PHP (7.x / 8.x)', highlight: true },
+        { name: 'Python (FastAPI)', highlight: true },
+        { name: 'PHP (Laravel, CodeIgniter)', highlight: true },
+        { name: 'Node.js (NestJS, Express)', highlight: true },
+        { name: 'Bun (Elysia)', highlight: true },
         { name: 'TypeScript / JavaScript', highlight: true },
-        { name: 'SQL (PostgreSQL / MySQL)', highlight: true },
-        { name: 'Bash / Shell Scripting', highlight: false },
-        { name: 'Node.js & Bun', highlight: false }
+        { name: 'RESTful API & OpenAPI/Swagger', highlight: true },
+        { name: 'Arsitektur Microservices', highlight: true }
       ]
     },
+
     {
-      category: 'Framework Backend & API',
-      description: 'Framework yang teruji di skala produksi untuk membangun arsitektur REST API, modul ERP, dan microservices.',
+      category: 'Database & Penyimpanan',
+      description: 'Penyimpanan relasional, dokumen, in-memory, dan vector database',
       skills: [
-        { name: 'Laravel (8 / 9 / 10)', highlight: true },
-        { name: 'FastAPI', highlight: true },
-        { name: 'CodeIgniter 3 / 4', highlight: true },
-        { name: 'Express.js', highlight: false },
-        { name: 'Elysia (Bun)', highlight: false },
-        { name: 'LangChain & RAG Toolkit', highlight: true }
-      ]
-    },
-    {
-      category: 'Database & Mesin Penyimpanan Data',
-      description: 'Penyimpanan data relasional berintegritas tinggi, cache memori cepat, dan database vektor untuk AI.',
-      skills: [
-        { name: 'PostgreSQL', highlight: true },
-        { name: 'MySQL', highlight: true },
+        { name: 'SQL (PostgreSQL, MySQL / MariaDB, SQLite)', highlight: true },
+        { name: 'NoSQL (MongoDB)', highlight: true },
         { name: 'Redis (Caching & Queues)', highlight: true },
-        { name: 'ChromaDB (Vector DB)', highlight: true },
-        { name: 'Prisma ORM', highlight: false },
-        { name: 'SQLite', highlight: false }
+        { name: 'ChromaDB (Vector Database)', highlight: true },
+        { name: 'Prisma ORM & Eloquent', highlight: true },
+        { name: 'Optimasi Query (EXPLAIN)', highlight: true }
       ]
     },
+
     {
-      category: 'DevOps, Cloud VPS & Infrastruktur',
-      description: 'Penggelaran server mandiri, kontainerisasi, reverse proxy, dan pemeliharaan server Linux di lingkungan cloud.',
+      category: 'AI & Data Engineering',
+      description: 'Integrasi LLM, sistem retrieval, dan pemrosesan data sensor',
       skills: [
-        { name: 'IDCloudHost VPS', highlight: true },
-        { name: 'AWS (EC2 / Lightsail)', highlight: true },
-        { name: 'Linux (Ubuntu Server)', highlight: true },
-        { name: 'Nginx Reverse Proxy', highlight: true },
-        { name: 'Docker & Docker Compose', highlight: true },
-        { name: 'Certbot SSL / Let\'s Encrypt', highlight: false },
-        { name: 'UFW Firewall & SSH Hardening', highlight: false }
+        { name: 'RAG (Retrieval Augmented Generation)', highlight: true },
+        { name: 'OpenAI API & Anthropic Models', highlight: true },
+        { name: 'Ollama (Local LLMs)', highlight: true },
+        { name: 'Prompt Engineering & Chunking', highlight: true },
+        { name: 'Agregasi Data Time-Series', highlight: true },
+        { name: 'Pipeline Telemetri Sensor (CEMS/AQMS/BTS)', highlight: true },
+        { name: 'Pemodelan ML Prediktif (Scikit-learn)', highlight: true }
       ]
     },
+
     {
-      category: 'Pengembangan Frontend & Visualisasi',
-      description: 'Membangun antarmuka pengguna web modern, responsif, dan dasbor analitik real-time.',
+      category: 'Frontend & UI (Jika Dibutuhkan)',
+      description: 'Antarmuka yang bersih dan responsif untuk melengkapi layanan backend',
       skills: [
         { name: 'React', highlight: true },
         { name: 'Next.js', highlight: true },
-        { name: 'Tailwind CSS', highlight: true },
-        { name: 'Svelte', highlight: false },
-        { name: 'Bootstrap & jQuery', highlight: false },
-        { name: 'ApexCharts & Chart.js', highlight: false },
-        { name: 'Google Maps API', highlight: false }
+        { name: 'Svelte', highlight: true },
+        { name: 'HTML, CSS', highlight: true }
       ]
     },
+
     {
-      category: 'Tools & Metodologi Kerja',
-      description: 'Standar alat kolaborasi, pengujian API, dan manajemen kode sumber dalam tim rekayasa perangkat lunak.',
+      category: 'Infrastruktur & DevOps',
+      description: 'Deployment, containerization, dan pemeliharaan sistem production',
       skills: [
-        { name: 'Git & GitHub / GitLab', highlight: true },
-        { name: 'Postman & Insomnia', highlight: true },
-        { name: 'Swagger / OpenAPI', highlight: true },
-        { name: 'DBeaver & TablePlus', highlight: false },
-        { name: 'Linux Systemd Services', highlight: false },
-        { name: 'Scrum & Agile Collaboration', highlight: false }
+        { name: 'Docker & Docker Compose', highlight: true },
+        { name: 'Linux (Ubuntu, CentOS)', highlight: true },
+        { name: 'Nginx & Reverse Proxy', highlight: true },
+        { name: 'CI/CD (GitLab, GitHub Actions)', highlight: true },
+        { name: 'AWS & Cloud Hosting', highlight: true },
+        { name: 'Windows Server & On-Premise', highlight: false },
+        { name: 'Git & Version Control', highlight: true }
       ]
     }
   ],
@@ -324,18 +316,19 @@ def hybrid_retrieve(query: str, top_k: int = 5):
     {
       id: 'exp-trusur',
       role: 'Software Engineer',
-      company: 'PT Trusur Unggul Teknindo',
-      period: 'Nov 2023 — Sekarang',
-      location: 'Jakarta & Tangerang Selatan, Indonesia',
+      company: 'PT Cetta Trans Digital',
+      period: 'Sep 2024 — Sekarang',
+      location: 'Jakarta,Indonesia (Hybrid) ',
       type: 'Penuh Waktu (Full-time)',
       impactBullets: [
-        'Merancang dan memelihara modul Enterprise Resource Planning (ERP) untuk pengadaan suku cadang, mutasi inventaris multi-gudang, dan alur approval PO.',
-        'Membangun sistem Egateway CEMS yang mengintegrasikan data sensor emisi cerobong pabrik ke portal SISPEK Kementerian LHK dengan tingkat keberhasilan 99.9%.',
-        'Mengonfigurasi dan mengelola puluhan server cloud VPS (IDCloudHost & AWS EC2) berbasis Docker, Nginx reverse proxy, dan SSL otomatis.',
-        'Melakukan pemeliharaan sistem berkala, menangani Change Request (CR) klien, dan mengoptimalkan query database PostgreSQL hingga 92% lebih cepat.',
-        'Membangun prototype sistem asisten kepatuhan pajak berbasis Hybrid RAG menggunakan Python, FastAPI, dan ChromaDB.'
+        'Merancang dan memelihara aplikasi web enterprise yang mencakup teknologi lingkungan (AQMS/CEMS), sistem ERP, dan platform perpajakan.',
+        'Mengurangi waktu respons API dari ~4 menit menjadi di bawah 20 detik melalui optimasi query PostgreSQL secara mendalam dan restrukturisasi layer akses data.',
+        'Meningkatkan kompleksitas komputasi algoritma dari O(n) menjadi O(1) pada proses bisnis kritis.',
+        'Mengintegrasikan 50+ sensor lingkungan industri ke dalam sistem monitoring terpusat dan berhasil mengirimkan data regulasi ke KLHK.',
+        'Berhasil menyelesaikan proyek enterprise kritis tanpa menimbulkan penalti bisnis.',
+        'Berkolaborasi dengan peneliti akademik dalam inisiatif forecasting AI/ML untuk meningkatkan akurasi prediksi kualitas udara'
       ],
-      technologies: ['Laravel', 'Python', 'PostgreSQL', 'Docker', 'Nginx', 'AWS', 'IDCloudHost', 'Redis', 'FastAPI']
+      technologies: ['Php', 'Laravel', 'Python', 'FastAPI', 'PostgreSQL', 'Docker', 'Nginx', 'AWS', 'IDCloudHost', 'Redis', 'FastAPI', 'Ubuntu/Windows Server']
     },
     {
       id: 'exp-sib',
@@ -452,7 +445,7 @@ Server VPS baru yang tersambung ke IP publik sering kali mulai menerima serangan
       tags: ['AI', 'RAG', 'Python', 'FastAPI', 'ChromaDB'],
       summary: 'Mengapa semantic search vektor saja tidak cukup untuk dokumen perundang-undangan dan bagaimana menggabungkannya dengan BM25 serta Cross-Encoder Reranking.',
       content: `### Kelemahan Dense Vector Search Murni pada Teks Hukum
-Pencarian vektor (Dense Retrieval) sangat handal menangkap arti semantik secara umum, namun sering gagal ketika pengguna mencari pasal spesifik seperti *"Pasal 21 ayat 5 huruf b UU KUP"*. Nilai embedding sering tertukar dengan pasal lain yang memiliki tema serupa.
+Pencarian vektor (Dense Retrieval) sangat handal menangkap arti semantik secara umum, namun sering gagal ketika user mencari pasal spesifik seperti *"Pasal 21 ayat 5 huruf b UU KUP"*. Nilai embedding sering tertukar dengan pasal lain yang memiliki tema serupa.
 
 ### Solusi: Arsitektur Hybrid RAG
 1. **Dense Retrieval (ChromaDB / OpenAI Ada):** Menangkap kemiripan konsep hukum dan konteks pertanyaan.

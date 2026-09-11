@@ -11,6 +11,10 @@ export const ProjectVisual: React.FC<ProjectVisualProps> = ({ project, mode = 't
   const isShowcase = mode === 'showcase';
   const [imageError, setImageError] = React.useState(false);
 
+  React.useEffect(() => {
+    setImageError(false);
+  }, [project.imageUrl, project.screenshots]);
+
   const displayImage = !imageError ? (project.imageUrl || project.screenshots?.[0]?.url) : null;
 
   // If a real image URL is provided (img) and not errored, render it cleanly

@@ -3,6 +3,7 @@ import { motion, AnimatePresence } from 'motion/react';
 import { X, ExternalLink, CheckCircle2, AlertTriangle, Cpu, ArrowRight, Layers } from 'lucide-react';
 import { Project } from '../types';
 import { ProjectVisual } from './ProjectVisual';
+import { ProjectGallery } from './ProjectGallery';
 import { useLanguage } from '../context/LanguageContext';
 
 interface ProjectModalProps {
@@ -87,27 +88,8 @@ export const ProjectModal: React.FC<ProjectModalProps> = ({ project, onClose }) 
           </div>
 
           <div className="p-6 space-y-7 text-sm">
-            {/* Visual Preview / Showcase Section */}
-            <div className="space-y-2">
-              <div className="flex items-center justify-between">
-                <span className="text-xs font-mono uppercase tracking-wider text-slate-500 dark:text-slate-400 font-bold flex items-center gap-1.5">
-                  <Layers className="w-3.5 h-3.5 text-emerald-600 dark:text-emerald-400" />
-                  <span>{t('modal.visualTitle')}</span>
-                </span>
-                {project.liveUrl && (
-                  <a
-                    href={project.liveUrl}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="text-xs font-mono text-emerald-700 dark:text-emerald-400 hover:underline flex items-center gap-1 font-semibold"
-                  >
-                    <span>{t('visual.openDemo')}</span>
-                    <ExternalLink className="w-3 h-3" />
-                  </a>
-                )}
-              </div>
-              <ProjectVisual project={project} mode="showcase" />
-            </div>
+            {/* Interactive Visual Gallery & Documentation */}
+            <ProjectGallery project={project} />
 
             {/* Project Scope & Deployment Environment Strip */}
             {(project.role || project.status || project.projectScope || project.deploymentEnvironment) && (

@@ -44,10 +44,12 @@ export const TechStack: React.FC<TechStackProps> = ({ data }) => {
                     0{idx + 1}
                   </span>
                 </div>
-                <p className="text-xs text-slate-600 dark:text-slate-400 leading-relaxed mb-4">
+                
+                {/* <p className="text-xs text-slate-600 dark:text-slate-400 leading-relaxed mb-4">
                   {group.description}
-                </p>
-
+                </p> */}
+              <div className="mt-6 pt-3 border-t border-slate-100 dark:border-slate-800/80 flex items-center justify-between text-[11px] font-mono text-slate-400 dark:text-slate-500">
+              </div>
                 <div className="flex flex-wrap gap-2 pt-1">
                   {group.skills.map((skill, sIdx) => (
                     <span
@@ -64,10 +66,10 @@ export const TechStack: React.FC<TechStackProps> = ({ data }) => {
                 </div>
               </div>
 
-              <div className="mt-6 pt-3 border-t border-slate-100 dark:border-slate-800/80 flex items-center justify-between text-[11px] font-mono text-slate-400 dark:text-slate-500">
+              {/* <div className="mt-6 pt-3 border-t border-slate-100 dark:border-slate-800/80 flex items-center justify-between text-[11px] font-mono text-slate-400 dark:text-slate-500">
                 <span>production verified</span>
                 <span className="text-emerald-700 dark:text-emerald-400/80 font-medium">● {t('stack.productionLevel')}</span>
-              </div>
+              </div> */}
             </motion.div>
           ))}
         </div>

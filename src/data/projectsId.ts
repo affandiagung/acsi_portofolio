@@ -1,5 +1,13 @@
 import { Project } from '../types';
 
+/**
+ * PANDUAN PENGGUNAAN GAMBAR PROYEK (LOCAL ASSETS):
+ * Simpan file gambar Anda di folder: /public/assets/projects/
+ * Contoh: /public/assets/projects/bakti-oss.png
+ * Lalu ubah properti `imageUrl` pada proyek di bawah menjadi:
+ * imageUrl: '/assets/projects/bakti-oss.png'
+ * (Bisa juga menggunakan link URL gambar eksternal https://...)
+ */
 export const PROJECTS_DATA_ID: Project[] = [
   {
     id: 'bakti-oss',
@@ -11,14 +19,14 @@ export const PROJECTS_DATA_ID: Project[] = [
     status: 'Pemeliharaan & pengembangan berkelanjutan',
     businessPurpose: 'Digunakan oleh BAKTI Kominfo (Badan Aksesibilitas Telekomunikasi dan Informasi) untuk mengelola dan memantau kegiatan operasional proyek telekomunikasi di Indonesia.',
     role: ['Pengembang Backend'],
-    problem: '10.000+ lokasi BTS di seluruh Indonesia menghasilkan volume data telemetri yang sangat besar dari sumber-sumber yang bervariasi (API, FTP, SFTP, CSV, Excel, dan file log). Format yang tidak konsisten dan skala data yang masif membuat pelaporan real-time, ekspor file Excel, dan penyesuaian kebutuhan mingguan dari pengguna menjadi sangat menantang.',
+    problem: '10.000+ lokasi BTS di seluruh Indonesia menghasilkan volume data telemetri yang sangat besar dari sumber-sumber yang bervariasi (API, FTP, SFTP, CSV, Excel, dan file log). Format yang tidak konsisten dan skala data yang masif membuat pelaporan real-time, ekspor file Excel, dan penyesuaian kebutuhan mingguan dari user menjadi sangat menantang.',
     solution: 'Membangun backend ingestion dan agregasi data berkinerja tinggi menggunakan Python, Go, dan Node.js/NestJS. Mempartisi tabel database PostgreSQL dengan materialized view, menerapkan antrean worker BullMQ, serta menghangatkan lapisan cache Redis untuk query KPI berkecepatan sub-detik.',
     technicalChallenges: [
       '10.000+ BTS di seluruh Indonesia menghasilkan data dari API, FTP, SFTP, CSV, Excel, dan file log',
       'Format data yang tidak konsisten memerlukan parsing, validasi, dan normalisasi ekstensif',
       'Volume data skala besar membuat pelaporan real-time dan ekspor Excel membebani komputasi',
       'Alur kerja pemeliharaan memerlukan otomatisasi pembuatan tiket, persetujuan, notifikasi, dan penutupan tiket',
-      'Perubahan mingguan yang sering diminta oleh pengguna menuntut sistem untuk tetap fleksibel dan modular'
+      'Perubahan mingguan yang sering diminta oleh user menuntut sistem untuk tetap fleksibel dan modular'
     ],
     keyContributions: [
       'Membangun pipeline pengumpulan data dari berbagai sumber jarak jauh (FTP, SFTP, CSV, Excel, file log)',
@@ -46,9 +54,13 @@ export const PROJECTS_DATA_ID: Project[] = [
       ]
     },
     liveUrl: 'https://baktioss.id',
-    imageUrl: 'https://images.unsplash.com/photo-1558494949-ef010cbdcc31?auto=format&fit=crop&w=1200&q=80',
+    imageUrl: '/assets/projects/bakti-oss.png',
     screenshots: [
-      { title: 'Ringkasan Sistem BAKTI OSS', url: 'https://images.unsplash.com/photo-1558494949-ef010cbdcc31?auto=format&fit=crop&w=1200&q=80', caption: 'Platform Telemetri Infrastruktur 10.000+ BTS BAKTI Kominfo' }
+      {
+        title: 'Topologi & Ikhtisar Sistem BAKTI OSS',
+        url: '/assets/projects/bakti-oss.png',
+        caption: 'Pemantauan analitik secara langsung terhadap metrik operasional dan transmisi data secara real-time.'
+      }
     ],
     downloads: {
       primary: { label: 'Unduh Arsitektur BAKTI OSS (.md)', type: 'spec' },
@@ -64,13 +76,13 @@ export const PROJECTS_DATA_ID: Project[] = [
     flag: 'Website',
     badge: 'Aplikasi Web Full-Stack',
     status: 'Proyek Personal',
-    businessPurpose: 'Website portal lowongan kerja yang memungkinkan pengguna menelusuri lowongan yang tersedia, sementara administrator dapat mengelola daftar pekerjaan melalui antarmuka admin terautentikasi.',
+    businessPurpose: 'Website portal lowongan kerja yang memungkinkan user menelusuri lowongan yang tersedia, sementara administrator dapat mengelola daftar pekerjaan melalui antarmuka admin terautentikasi.',
     role: ['Pengembang Frontend', 'Pengembang Full-Stack'],
     problem: 'Pencari kerja membutuhkan portal yang simpel dan responsif untuk mencari serta menelusuri peluang kerja secara dinamis, sementara admin perekrutan memerlukan dashboard terautentikasi untuk menerbitkan, memperbarui, dan menghapus lowongan kerja tanpa perlu mengedit file secara manual.',
-    solution: 'Membangun aplikasi web single-page dinamis menggunakan ReactJS dengan arsitektur komponen modular dan CSS. Terhubung ke backend REST API dengan autentikasi pengguna/admin dan fungsionalitas CRUD lengkap untuk manajemen lowongan.',
+    solution: 'Membangun aplikasi web single-page dinamis menggunakan ReactJS dengan arsitektur komponen modular dan CSS. Terhubung ke backend REST API dengan autentikasi user/admin dan fungsionalitas CRUD lengkap untuk manajemen lowongan.',
     technicalChallenges: [
       'Membangun arsitektur frontend berbasis komponen di ReactJS dengan navigasi client-side yang lancar',
-      'Mengimplementasikan autentikasi dan otorisasi terproteksi bagi pengguna umum dan administrator',
+      'Mengimplementasikan autentikasi dan otorisasi terproteksi bagi user umum dan administrator',
       'Mengembangkan tata letak UI responsif yang optimal di layar perangkat ponsel maupun komputer desktop',
       'Menyusun rendering data dinamis dan validasi formulir untuk daftar lowongan pekerjaan'
     ],
@@ -98,9 +110,10 @@ export const PROJECTS_DATA_ID: Project[] = [
       ]
     },
     liveUrl: 'https://affandi.reactjssanbercode.my.id/',
-    imageUrl: 'https://images.unsplash.com/photo-1486312338219-ce68d2c6f44d?auto=format&fit=crop&w=1200&q=80',
+    imageUrl: '/assets/projects/job-portal.png',
     screenshots: [
-      { title: 'Antarmuka Publik & Admin Job Portal', url: 'https://images.unsplash.com/photo-1486312338219-ce68d2c6f44d?auto=format&fit=crop&w=1200&q=80', caption: 'Job Portal ReactJS dengan penelusuran dinamis dan administrasi lowongan' }
+      { title: 'Antarmuka Publik & Penelusuran Lowongan', url: '/assets/projects/job-portal.png', caption: 'Job Portal ReactJS dengan pencarian dinamis, filter kategori, dan status pekerjaan' },
+      { title: 'Panel Administratif Pengelolaan Lowongan', url: '/assets/projects/job-portal-admin.png', caption: 'Dashboard autentikasi admin untuk posting posisi baru dan evaluasi status pelamar' }
     ],
     downloads: {
       primary: { label: 'Unduh Spek Job Portal (.md)', type: 'spec' },
@@ -156,9 +169,11 @@ export const PROJECTS_DATA_ID: Project[] = [
       { name: 'GOS Absen', url: '#', description: 'Aplikasi presensi karyawan dengan validasi geolokasi dan verifikasi foto selfie.' },
       { name: 'GOS Admin', url: '#', description: 'Portal admin untuk mengelola perusahaan, karyawan, titik lokasi, dan ekspor laporan.' }
     ],
-    imageUrl: 'https://images.unsplash.com/photo-1551836022-d5d88e9218df?auto=format&fit=crop&w=1200&q=80',
+    imageUrl: '/assets/projects/gos-login.png',
     screenshots: [
-      { title: 'GOS Attendance & Mobile Clock-in', url: 'https://images.unsplash.com/photo-1551836022-d5d88e9218df?auto=format&fit=crop&w=1200&q=80', caption: 'Workforce Attendance with Geolocation and Selfie Verification' }
+      { title: 'Gos Absen Dashboard', url: '/assets/projects/gos-absen-1.png', caption: 'GOS Absen Dashboard' },
+      { title: 'Presensi Mobile Geolokasi & Selfie', url: '/assets/projects/gos-absen-2.png', caption: 'Aplikasi presensi karyawan dengan validasi radius geofence GPS dan verifikasi foto selfie MinIO' },
+      { title: 'Portal GOS Admin & Pengaturan Shift', url: '/assets/projects/gos-admin.png', caption: 'Portal HR enterprise untuk manajemen titik kantor, multi-shift kerja, dan approval izin/cuti' },
     ],
     downloads: {
       primary: { label: 'Unduh Spek Arsitektur GOS (.md)', type: 'spec' },
@@ -205,10 +220,10 @@ export const PROJECTS_DATA_ID: Project[] = [
       { label: 'Penjadwalan', value: 'Otonom 24/7', desc: 'Windows Task Scheduler batch berulang' },
       { label: 'Engine Data', value: 'Normalizer Python', desc: 'Transformasi real-time CSV & API' }
     ],
-    stack: ['Laravel 10', 'PHP', 'Python', 'Bootstrap', 'TailwindCSS', 'ApexCharts', 'PostgreSQL', 'Apache', 'Windows Server', 'Windows Task Scheduler', 'XAMPP'],
-    imageUrl: 'https://images.unsplash.com/photo-1581092160607-ee22621dd758?auto=format&fit=crop&w=1200&q=80',
+    stack: ['Laravel 10', 'Python', 'Bootstrap', 'PostgreSQL', 'Windows Server', 'XAMPP'],
+    imageUrl: '/assets/projects/egateway-login.png',
     screenshots: [
-      { title: 'Egateway CEMS Monitoring Gateway', url: 'https://images.unsplash.com/photo-1581092160607-ee22621dd758?auto=format&fit=crop&w=1200&q=80', caption: 'On-premise Industrial Emission Telemetry Gateway' }
+      { title: 'Dashboard Emisi Cerobong Industri', url: '/assets/projects/egateway-dashboard.png', caption: 'Pemantauan kontinu parameter gas buang cerobong industri (SO2, NOx, CO, O2, Partikulat)' }
     ],
     architecture: {
       flowDescription: 'Instrumen CEMS di pabrik industri terus menghasilkan data emisi cerobong. Data diterima melalui API atau transfer CSV, diproses dan dinormalisasi oleh skrip Python, disimpan di PostgreSQL, dikelola oleh Laravel Egateway, dan dikirimkan ke SISPEK KLHK.',
@@ -272,9 +287,9 @@ export const PROJECTS_DATA_ID: Project[] = [
       ]
     },
     liveUrl: 'https://dashboard.greenteams.co/',
-    imageUrl: 'https://images.unsplash.com/photo-1532601224476-15c79f2f7a51?auto=format&fit=crop&w=1200&q=80',
+    imageUrl: '/assets/projects/dpu.png',
     screenshots: [
-      { title: 'Dashboard Pemantauan Langsung AQMS', url: 'https://images.unsplash.com/photo-1532601224476-15c79f2f7a51?auto=format&fit=crop&w=1200&q=80', caption: 'Dashboard pemantauan udara real-time dengan peramalan AI prediktif' }
+      { title: 'Asisten Chatbot AI Kualitas Udara', url: '/assets/projects/dpu-chatbot.png', caption: 'Chatbot AI cerdas untuk rekomendasi aktivitas dan analisis mendalam data lingkungan' }
     ],
     downloads: {
       primary: { label: 'Unduh Arsitektur Dashboard AQMS (.md)', type: 'spec' },
@@ -293,7 +308,7 @@ export const PROJECTS_DATA_ID: Project[] = [
     businessPurpose: 'Aplikasi berbasis web untuk mendukung proses Enterprise Resource Planning (ERP) dan pengelolaan operasional bisnis, pengadaan, pelacakan aset, dan alur kerja perusahaan.',
     role: ['Software Engineer'],
     problem: 'Operasional bisnis perusahaan melibatkan alur pelacakan inventaris yang kompleks, pembelian dari pemasok, serta persetujuan antar divisi yang membutuhkan perbaikan bug cepat, adaptasi alur kerja, dan konsistensi data yang mutlak.',
-    solution: 'Memelihara dan terus meningkatkan sistem ERP web di lingkungan produksi. Menyelesaikan bug operasional, menyesuaikan alur kerja berdasarkan feedback pengguna, dan menambahkan modul baru sesuai dinamika bisnis perusahaan.',
+    solution: 'Memelihara dan terus meningkatkan sistem ERP web di lingkungan produksi. Menyelesaikan bug operasional, menyesuaikan alur kerja berdasarkan feedback user, dan menambahkan modul baru sesuai dinamika bisnis perusahaan.',
     technicalChallenges: [
       'Menjaga keandalan tinggi pada modul ERP yang saling berkaitan (pengadaan, stok gudang, penagihan)',
       'Menyelesaikan kendala sistem secara cepat untuk mencegah hambatan operasional di divisi gudang dan keuangan',
@@ -301,7 +316,7 @@ export const PROJECTS_DATA_ID: Project[] = [
     ],
     keyContributions: [
       'Memelihara fitur-fitur ERP web yang ada dan menyelesaikan bug operasional sistem',
-      'Memodifikasi fungsionalitas aplikasi sesuai dinamika operasional dan kebutuhan pengguna',
+      'Memodifikasi fungsionalitas aplikasi sesuai dinamika operasional dan kebutuhan user',
       'Mengimplementasikan penambahan fitur baru yang mendukung alur kerja pengadaan dan stok barang',
       'Melakukan pemeliharaan database berkala, penyesuaian query, dan peningkatan stabilitas sistem'
     ],
@@ -309,7 +324,7 @@ export const PROJECTS_DATA_ID: Project[] = [
       { label: 'Kelas Sistem', value: 'ERP Enterprise', desc: 'Platform bisnis multi-modul terintegrasi' },
       { label: 'Alur Kerja', value: 'End-to-End', desc: 'Pengadaan, inventaris, dan operasional' },
       { label: 'Keandalan', value: 'SLA Produksi', desc: 'Nol gangguan saat pembaruan fitur' },
-      { label: 'Keamanan', value: 'RBAC', desc: 'Hak akses berbasis peran pengguna' }
+      { label: 'Keamanan', value: 'RBAC', desc: 'Hak akses berbasis peran user' }
     ],
     stack: ['Web Application', 'PHP', 'MySQL', 'JavaScript', 'Bootstrap', 'REST API'],
     architecture: {
@@ -322,9 +337,10 @@ export const PROJECTS_DATA_ID: Project[] = [
       ]
     },
     liveUrl: 'https://dashboards.trusur.tech/',
-    imageUrl: 'https://images.unsplash.com/photo-1460925895917-afdab827c52f?auto=format&fit=crop&w=1200&q=80',
+    imageUrl: '/assets/projects/erp-login.png',
     screenshots: [
-      { title: 'Dashboard Enterprise Trusur ERP', url: 'https://images.unsplash.com/photo-1460925895917-afdab827c52f?auto=format&fit=crop&w=1200&q=80', caption: 'Platform Enterprise Resource Planning (ERP) berbasis web' }
+      { title: 'Dashboard Operasional & Finansial ERP', url: '/assets/projects/erp-menu.png', caption: 'Ikhtisar transaksi harian, status pesanan penjualan, dan neraca operasional bisnis' },
+      { title: 'Manajemen Prosedur', url: '/assets/projects/erp-menu-1.png', caption: 'Menu Pengaturan Prosedur - SOP' }
     ],
     downloads: {
       primary: { label: 'Unduh Gambaran Trusur ERP (.md)', type: 'spec' },
@@ -375,9 +391,10 @@ export const PROJECTS_DATA_ID: Project[] = [
       ]
     },
     liveUrl: 'https://aqms.trusur.tech/login',
-    imageUrl: 'https://images.unsplash.com/photo-1504868584819-f8e8b4b6d7e3?auto=format&fit=crop&w=1200&q=80',
+    imageUrl: '/assets/projects/aqms-login.png',
     screenshots: [
-      { title: 'AQMS Legacy Performance & Database Optimization', url: 'https://images.unsplash.com/photo-1504868584819-f8e8b4b6d7e3?auto=format&fit=crop&w=1200&q=80', caption: 'Database profiling and query optimization dashboard' }
+      { title: 'Laporan', url: '/assets/projects/aqms-report.png', caption: 'Laporan komprehensif tentang data dan analisis AQMS' },
+      { title: 'Peta', url: '/assets/projects/aqms-maps.png', caption: 'Peta menunjukkan lokasi sensor AQMS dan visualisasi data' }
     ],
     downloads: {
       primary: { label: 'Unduh Studi Kasus Optimasi (.md)', type: 'spec' },
@@ -417,10 +434,24 @@ export const PROJECTS_DATA_ID: Project[] = [
       { label: 'Ketahanan Edge', value: 'Store & Forward', desc: 'Buffer data lokal saat koneksi internet putus' },
       { label: 'Bantuan Remote', value: 'TeamViewer', desc: 'Akses perbaikan jarak jauh tanpa gangguan' }
     ],
-    stack: ['Python', 'PHP', 'Linux MX', 'Apache', 'MariaDB', 'Cron', 'Serial Communication', 'USB', 'TeamViewer'],
-    imageUrl: 'https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&fit=crop&w=1200&q=80',
+    stack: ['Python', 'Code Igniter', 'Linux', 'Apache', 'MariaDB', 'Cron', 'Serial Communication', 'TeamViewer'],
+    imageUrl: '/assets/projects/efs-sensor.png',
     screenshots: [
-      { title: 'EFS AQMS Edge Embedded System', url: 'https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&fit=crop&w=1200&q=80', caption: 'Autonomous Linux Edge Computing System for AQMS Telemetry' }
+      {
+        title: 'Linux MX',
+        url: '/assets/projects/efs-linux.png',
+        caption: 'Sistem operasi berbasis Linux yang digunakan untuk pengembangan, administrasi server, konfigurasi sistem, pemecahan masalah, dan deployment.'
+      },
+      {
+        title: 'AQMS-EFS Sensor',
+        url: '/assets/projects/efs-sensor.png',
+        caption: 'Arsitektur store-and-forward yang memastikan tidak ada paket data telemetri yang hilang saat terjadi gangguan koneksi.'
+      },
+      {
+        title: 'AQMS-EFS Warehouse',
+        url: '/assets/projects/efs-warehouse.png',
+        caption: 'Tempat penyimpanan perangkat sensor dan peralatan monitoring untuk mendukung operasional serta pemantauan kualitas udara di area sekitar.'
+      },
     ],
     architecture: {
       flowDescription: 'Sensor AQMS yang terhubung melalui PLC dan perangkat komunikasi mengirimkan data pengukuran ke perangkat edge EFS. Sistem EFS membaca dan memproses data melalui service Python, menyimpannya di storage lokal, dan meneruskannya secara andal ke Dashboard AQMS terpusat.',
@@ -447,12 +478,12 @@ export const PROJECTS_DATA_ID: Project[] = [
     flag: 'AI / Backend',
     badge: 'Microservices & RAG',
     status: 'Pemeliharaan & pengembangan berkelanjutan',
-    businessPurpose: 'Platform perpajakan yang menyediakan pengelolaan pengguna, master data perpajakan, proses perhitungan pajak otomatis, serta AI Assistant berbasis RAG untuk membantu wajib pajak memahami ketentuan dan regulasi perpajakan.',
+    businessPurpose: 'Platform perpajakan yang menyediakan pengelolaan user, master data perpajakan, proses perhitungan pajak otomatis, serta AI Assistant berbasis RAG untuk membantu wajib pajak memahami ketentuan dan regulasi perpajakan.',
     role: ['Pengembang Backend', 'Pengembangan Fitur AI/LLM', 'CI/CD & Deployment'],
     problem: 'Perhitungan pajak di Indonesia melibatkan aturan regulasi yang rumit, sering mengalami pembaruan, dan memiliki matriks data acuan yang besar. Pengguna memerlukan kalkulator pajak yang presisi serta asisten cerdas yang mampu merujuk pasal undang-undang resmi tanpa halusinasi AI.',
     solution: 'Merancang arsitektur microservices yang memisahkan layanan User, Master Data, Kalkulasi Pajak, dan AI menggunakan Python FastAPI. Membangun asisten Retrieval-Augmented Generation (RAG) menggunakan ChromaDB untuk pencarian vektor, Ollama dengan model Qwen2.5, serta streaming Server-Sent Events (SSE).',
     technicalChallenges: [
-      'Memisahkan sistem menjadi microservices independen untuk beban kerja pengguna, master, kalkulasi, dan AI',
+      'Memisahkan sistem menjadi microservices independen untuk beban kerja user, master, kalkulasi, dan AI',
       'Merancang pemotongan chunk teks regulasi pajak Indonesia dan pencarian vektor semantik berakurasi tinggi',
       'Mengimplementasikan streaming Server-Sent Events (SSE) untuk respon interaktif chatbot AI tanpa jeda',
       'Mengatur pipeline deployment CI/CD di server Linux dengan reverse proxy Nginx dan process manager PM2'
@@ -472,9 +503,9 @@ export const PROJECTS_DATA_ID: Project[] = [
     ],
     stack: ['Python', 'FastAPI', 'REST API', 'Microservices', 'PostgreSQL', 'LLM', 'RAG', 'Vector Database', 'ChromaDB', 'Ollama', 'CI/CD', 'Linux', 'PM2', 'Nginx'],
     architecture: {
-      flowDescription: 'Caltax menerapkan arsitektur microservices di mana pengelolaan pengguna, master data, pemrosesan pajak, dan fungsionalitas AI ditangani oleh service terpisah yang berkomunikasi melalui API untuk menghadirkan alur kerja terpadu.',
+      flowDescription: 'Caltax menerapkan arsitektur microservices di mana pengelolaan user, master data, pemrosesan pajak, dan fungsionalitas AI ditangani oleh service terpisah yang berkomunikasi melalui API untuk menghadirkan alur kerja terpadu.',
       steps: [
-        { title: 'User Service', desc: 'Menangani registrasi pengguna, otentikasi, login, dan pengelolaan profil', tag: 'Autentikasi' },
+        { title: 'User Service', desc: 'Menangani registrasi user, otentikasi, login, dan pengelolaan profil', tag: 'Autentikasi' },
         { title: 'Master Service', desc: 'Menyediakan tarif master, data referensi, dan matriks persyaratan perhitungan pajak', tag: 'Master Data' },
         { title: 'Tax Service', desc: 'Memproses data input dan mengeksekusi komputasi serta logika bisnis utama perpajakan', tag: 'Komputasi' },
         { title: 'AI Service', desc: 'Asisten AI berbasis RAG mencari pengetahuan hukum pajak terkait dan menyusun jawaban kontekstual', tag: 'AI / RAG' },
@@ -487,9 +518,28 @@ export const PROJECTS_DATA_ID: Project[] = [
       { name: 'Caltax Tax Service', url: 'https://tax-caltax-dev.cetta.tech/' },
       { name: 'Caltax AI Service', url: 'https://ai-caltax-dev.cetta.tech/' }
     ],
-    imageUrl: 'https://images.unsplash.com/photo-1554224155-8d04cb21cd6c?auto=format&fit=crop&w=1200&q=80',
+    imageUrl: '/assets/projects/caltax-login.png',
     screenshots: [
-      { title: 'Arsitektur Pajak & AI Caltax', url: 'https://images.unsplash.com/photo-1554224155-8d04cb21cd6c?auto=format&fit=crop&w=1200&q=80', caption: 'Microservices FastAPI dan asisten pajak AI berbasis RAG' }
+      {
+        title: 'Caltax Login',
+        url: '/assets/projects/caltax-login.png',
+        caption: 'Autentikasi pengguna untuk mengakses aplikasi Caltax dan berbagai fitur perpajakan'
+      },
+      {
+        title: 'Caltax Dashboard',
+        url: '/assets/projects/caltax-dashboard.png',
+        caption: 'Dashboard utama yang menyediakan akses ke kalkulator pajak, AI Assistant, dan berbagai fitur aplikasi'
+      },
+      {
+        title: 'Caltax AI Chat',
+        url: '/assets/projects/caltax-ai-chat.png',
+        caption: 'Asisten chat berbasis AI untuk menjawab pertanyaan perpajakan dan mengambil informasi dari regulasi pajak Indonesia yang relevan'
+      },
+      {
+        title: 'AI Service — FastAPI & Swagger',
+        url: '/assets/projects/caltax-ai-service.png',
+        caption: 'Layanan AI berbasis FastAPI dengan dokumentasi Swagger untuk menguji dan mengelola endpoint API terkait layanan AI'
+      }
     ],
     downloads: {
       primary: { label: 'Unduh Spek Arsitektur Caltax (.md)', type: 'spec' },
@@ -518,7 +568,7 @@ export const PROJECTS_DATA_ID: Project[] = [
       'Mengembangkan aplikasi web POS berbasis SaaS yang ditargetkan untuk operasional UMKM kuliner',
       'Merancang alur transaksi kasir yang intuitif, pemilihan varian menu, dan pencatatan pembayaran',
       'Membangun endpoint REST API untuk manajemen katalog, pelaporan penjualan harian, dan riwayat pesanan',
-      'Melakukan deployment prototipe aplikasi live di Vercel untuk uji coba pengguna dan iterasi produk'
+      'Melakukan deployment prototipe aplikasi live di Vercel untuk uji coba user dan iterasi produk'
     ],
     metrics: [
       { label: 'Target Sasaran', value: 'UMKM Kuliner', desc: 'Warung, angkringan, dan kedai' },
@@ -536,9 +586,18 @@ export const PROJECTS_DATA_ID: Project[] = [
       ]
     },
     liveUrl: 'https://saas-pos-umkm.vercel.app/',
-    imageUrl: 'https://images.unsplash.com/photo-1556742049-0a67e557224f?auto=format&fit=crop&w=1200&q=80',
+    imageUrl: '/assets/projects/pos-login.png',
     screenshots: [
-      { title: 'Antarmuka Kasir SaaS POS UMKM', url: 'https://images.unsplash.com/photo-1556742049-0a67e557224f?auto=format&fit=crop&w=1200&q=80', caption: 'Platform Point of Sale untuk pelaku usaha mikro kuliner' }
+      {
+        'title': 'POS UMKM Authentication',
+        'url' : '/assets/projects/pos-login.png',
+        'caption': 'User authentication for secure access to the POS platform and business management features'
+      },
+      {
+        'title': 'POS UMKM Dashboard',
+        'url': '/assets/projects/pos-dashboard.png',
+        'caption': 'Centralized dashboard for accessing POS features and monitoring business activities'
+      }
     ],
     downloads: {
       primary: { label: 'Unduh Spek Sistem POS (.md)', type: 'spec' },
@@ -587,7 +646,9 @@ export const PROJECTS_DATA_ID: Project[] = [
     liveUrl: 'https://sukavillage-v7.vercel.app/',
     imageUrl: 'https://images.unsplash.com/photo-1566073771259-6a8506099945?auto=format&fit=crop&w=1200&q=80',
     screenshots: [
-      { title: 'Showcase Destinasi Suka Village', url: 'https://images.unsplash.com/photo-1566073771259-6a8506099945?auto=format&fit=crop&w=1200&q=80', caption: 'Platform destinasi hospitality dan retreat full-stack' }
+      { title: 'Katalog Villa & Akomodasi Eksklusif', url: 'https://images.unsplash.com/photo-1566073771259-6a8506099945?auto=format&fit=crop&w=1200&q=80', caption: 'Galeri visual penginapan dengan detail fasilitas, kapasitas tamu, dan harga sewa' },
+      { title: 'Menu Kuliner Restoran & Aktivitas Outdoor', url: 'https://images.unsplash.com/photo-1517248135467-4c7edcad34c4?auto=format&fit=crop&w=1200&q=80', caption: 'Daftar sajian khas kuliner dan paket rekreasi outbound keluarga atau gathering perusahaan' },
+      { title: 'Formulir Reservasi Event & Kontak Pengelola', url: 'https://images.unsplash.com/photo-1522071820081-009f0129c71c?auto=format&fit=crop&w=1200&q=80', caption: 'Alur pengajuan booking tempat dan konsultasi acara privat' }
     ],
     downloads: {
       primary: { label: 'Unduh Spek Suka Village (.md)', type: 'spec' },

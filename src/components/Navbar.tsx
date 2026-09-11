@@ -54,10 +54,10 @@ export const Navbar: React.FC<NavbarProps> = ({ data, onOpenTerminal }) => {
           <div>
             <div className="font-mono text-sm font-semibold tracking-tight text-slate-900 dark:text-slate-100 flex items-center gap-2">
               AFFANDI
-              <span className="inline-flex items-center gap-1 text-[11px] font-mono font-normal text-emerald-700 dark:text-emerald-400 bg-emerald-50 dark:bg-emerald-950/60 border border-emerald-200 dark:border-emerald-800/50 px-1.5 py-0.5 rounded">
+              {/* <span className="inline-flex items-center gap-1 text-[11px] font-mono font-normal text-emerald-700 dark:text-emerald-400 bg-emerald-50 dark:bg-emerald-950/60 border border-emerald-200 dark:border-emerald-800/50 px-1.5 py-0.5 rounded">
                 <span className="w-1.5 h-1.5 rounded-full bg-emerald-600 dark:bg-emerald-400 animate-pulse" />
                 sys_ok
-              </span>
+              </span> */}
             </div>
             <div className="text-[11px] text-slate-500 dark:text-slate-400 tracking-wide font-medium">
               Software Engineer

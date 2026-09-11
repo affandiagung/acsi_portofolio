@@ -15,12 +15,13 @@ export const INITIAL_PORTFOLIO_DATA_EN: PortfolioData = {
       'Website & SaaS Development',
       'Cloud & VPS Software Installation',
       'Production Software Maintenance',
-      'Database & API Optimization'
+      'Database & API Optimization',
+      'Real-Time Monitoring Dashboard',
     ],
-    aboutStory: [
-      "I'm a Software Engineer with extensive experience building and maintaining enterprise systems, web applications, cloud server deployments, and AI pipelines.",
-      "My core competencies span 4 key pillars: Enterprise Resource Planning (ERP) systems, modern website & SaaS development, cloud/VPS software installation (AWS & IDCloudHost), and ongoing production software maintenance, bug fixing & troubleshooting.",
-      "Whether optimizing database performance, handling client change requests (CR), or deploying containerized apps with Nginx and SSL, I deliver stable, production-grade solutions with high reliability."
+    aboutStory:[
+      "I'm a Software Engineer with experience building and maintaining web applications, backend systems, and AI-powered applications.",
+      "My main focus is backend development, with experience in APIs, databases, cloud deployment, and system integration.",
+      "I used to solve  technical problems, improving system performance, and building reliable applications for real-world use."
     ],
     email: 'ccoc.20001@gmail.com',
     phone: '+62858 1317 7600',
@@ -303,26 +304,25 @@ CMD ["uvicorn", "main:app", "--host", "0.0.0.0", "--port", "8000", "--workers", 
       category: 'Backend Languages & Frameworks',
       description: 'Core runtime environments for high-throughput APIs and background workers',
       skills: [
-        { name: 'Python (FastAPI, Django)', highlight: true },
-        { name: 'PHP (Laravel 10, CodeIgniter)', highlight: true },
+        { name: 'Python (FastAPI)', highlight: true },
+        { name: 'PHP (Laravel, CodeIgniter)', highlight: true },
         { name: 'Node.js (NestJS, Express)', highlight: true },
         { name: 'Bun (Elysia)', highlight: true },
         { name: 'TypeScript / JavaScript', highlight: true },
         { name: 'RESTful API & OpenAPI/Swagger', highlight: true },
-        { name: 'Microservices Architecture' }
+        { name: 'Microservices Architecture', highlight: true }
       ]
     },
     {
       category: 'Databases & Storage',
       description: 'Relational, document, in-memory, and vector persistence',
       skills: [
-        { name: 'PostgreSQL (Partitions, Views)', highlight: true },
-        { name: 'MySQL / MariaDB', highlight: true },
-        { name: 'Redis (Caching & Pub/Sub)', highlight: true },
-        { name: 'MongoDB', highlight: false },
+        { name: 'SQL (PostgreSQL , MySQL / MariaDB, SQLite)', highlight: true },
+        { name: 'NoSQL ( MongoDB )', highlight: true },
+        { name: 'Redis (Caching & Queues)', highlight: true },
         { name: 'ChromaDB (Vector DB)', highlight: true },
-        { name: 'Prisma ORM & Eloquent' },
-        { name: 'Query Optimization (EXPLAIN)' }
+        { name: 'Prisma ORM & Eloquent', highlight: true },
+        { name: 'Query Optimization (EXPLAIN)', highlight: true }
       ]
     },
     {
@@ -334,8 +334,8 @@ CMD ["uvicorn", "main:app", "--host", "0.0.0.0", "--port", "8000", "--workers", 
         { name: 'Ollama (Local LLMs)', highlight: true },
         { name: 'Prompt Engineering & Chunking', highlight: true },
         { name: 'Time-Series Data Aggregation', highlight: true },
-        { name: 'Sensor Telemetry Pipelines (CEMS/AQMS)' },
-        { name: 'Predictive ML Modeling (Scikit-learn)' }
+        { name: 'Sensor Telemetry Pipelines (CEMS/AQMS/BTS)', highlight: true },
+        { name: 'Predictive ML Modeling (Scikit-learn)', highlight: true }
       ]
     },
     {
@@ -345,10 +345,7 @@ CMD ["uvicorn", "main:app", "--host", "0.0.0.0", "--port", "8000", "--workers", 
         { name: 'React', highlight: true },
         { name: 'Next.js', highlight: true },
         { name: 'Svelte', highlight: true },
-        { name: 'Tailwind CSS', highlight: true },
-        { name: 'Google Maps API', highlight: true },
-        { name: 'ApexCharts & Recharts' },
-        { name: 'HTML5 / CSS3' }
+        { name: 'HTML, CSS', highlight: true }
       ]
     },
     {
@@ -359,9 +356,9 @@ CMD ["uvicorn", "main:app", "--host", "0.0.0.0", "--port", "8000", "--workers", 
         { name: 'Linux (Ubuntu, CentOS)', highlight: true },
         { name: 'Nginx & Reverse Proxy', highlight: true },
         { name: 'CI/CD (GitLab, GitHub Actions)', highlight: true },
-        { name: 'AWS & Cloud Hosting', highlight: false },
+        { name: 'AWS & Cloud Hosting', highlight: true },
         { name: 'Windows Server & On-Premise', highlight: false },
-        { name: 'Git & Version Control' }
+        { name: 'Git & Version Control', highlight: true }
       ]
     }
   ],
@@ -377,11 +374,11 @@ CMD ["uvicorn", "main:app", "--host", "0.0.0.0", "--port", "8000", "--workers", 
         'Architected and maintained enterprise web applications spanning environmental tech (AQMS/CEMS), ERP systems, and taxation platforms.',
         'Reduced API response times from ~4 minutes to under 20 seconds through deep PostgreSQL query optimization and restructured data access layers.',
         'Improved algorithmic computational complexity from O(n) to O(1) for critical business processes.',
-        'Integrated 50+ industrial environmental sensors into centralized monitoring systems, maintaining 99.9% successful regulatory transmission to KLHK.',
-        'Successfully recovered a critical enterprise project delayed for four months without incurring business penalties.',
+        'Integrated 50+ industrial environmental sensors into centralized monitoring systems and successfully transmitted regulatory data to KLHK.',
+        'Successfully delivery a critical enterprise project without incurring business penalties.',
         'Collaborated with academic researchers on AI/ML forecasting initiatives, enhancing air quality prediction accuracy by ~15%.'
       ],
-      technologies: ['PHP', 'Laravel 10', 'Python', 'FastAPI', 'Svelte', 'Bun', 'PostgreSQL', 'MySQL', 'Redis', 'Docker', 'OpenAI API', 'RAG']
+      technologies: ['Php', 'Laravel', 'Python', 'FastAPI', 'PostgreSQL', 'Docker', 'Nginx', 'AWS', 'IDCloudHost', 'Redis', 'FastAPI', 'Ubuntu/Windows Server']
     },
     {
       id: 'exp-2',

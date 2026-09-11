@@ -1,5 +1,13 @@
 import { Project } from '../types';
 
+/**
+ * PROJECT IMAGE / ASSET GUIDE:
+ * Put your image files in: /public/assets/projects/
+ * Example: /public/assets/projects/bakti-oss.png
+ * Then set the `imageUrl` property for any project to:
+ * imageUrl: '/assets/projects/bakti-oss.png'
+ * (External URLs https://... are also supported)
+ */
 export const PROJECTS_DATA_EN: Project[] = [
   {
     id: 'bakti-oss',
@@ -34,7 +42,7 @@ export const PROJECTS_DATA_EN: Project[] = [
       { label: 'Aggregation', value: '15m to Monthly', desc: 'Automated multi-interval KPI rollups' },
       { label: 'Cache Hit Rate', value: '99.4%', desc: 'Redis in-memory caching for dashboards' }
     ],
-    stack: ['Python', 'Golang', 'NodeJS', 'NestJS', 'TypeScript', 'PostgreSQL', 'MongoDB', 'Redis', 'BullMQ', 'Worker', 'Nginx', 'PM2', 'Ubuntu Server'],
+    stack: ['Python', 'NodeJS', 'NestJS', 'TypeScript', 'PostgreSQL', 'MongoDB', 'Redis', 'BullMQ', 'Worker', 'Nginx', 'PM2', 'Ubuntu Server'],
     architecture: {
       flowDescription: 'Data flows from 10K+ remote BTS collectors through ingestion workers into partitioned PostgreSQL tables, warmed into Redis cache, and served via optimized REST APIs to administrative dashboards.',
       steps: [
@@ -46,9 +54,13 @@ export const PROJECTS_DATA_EN: Project[] = [
       ]
     },
     liveUrl: 'https://baktioss.id',
-    imageUrl: 'https://images.unsplash.com/photo-1558494949-ef010cbdcc31?auto=format&fit=crop&w=1200&q=80',
+    imageUrl: '/assets/projects/bakti-oss.png',
     screenshots: [
-      { title: 'BAKTI OSS System Overview', url: 'https://images.unsplash.com/photo-1558494949-ef010cbdcc31?auto=format&fit=crop&w=1200&q=80', caption: 'BAKTI Kominfo 10,000+ BTS Infrastructure Telemetry Platform' }
+      {
+        title: 'Login Page',
+        url: '/assets/projects/bakti-oss.png',
+        caption: 'Live analytical monitoring of operational metrics and real-time data transmissions'
+      }
     ],
     downloads: {
       primary: { label: 'Download BAKTI OSS Architecture (.md)', type: 'spec' },
@@ -98,9 +110,10 @@ export const PROJECTS_DATA_EN: Project[] = [
       ]
     },
     liveUrl: 'https://affandi.reactjssanbercode.my.id/',
-    imageUrl: 'https://images.unsplash.com/photo-1486312338219-ce68d2c6f44d?auto=format&fit=crop&w=1200&q=80',
+    imageUrl: '/assets/projects/job-portal.png',
     screenshots: [
-      { title: 'Job Portal Public & Admin Interface', url: 'https://images.unsplash.com/photo-1486312338219-ce68d2c6f44d?auto=format&fit=crop&w=1200&q=80', caption: 'ReactJS Job Portal with dynamic listing and administration' }
+      { title: 'Public Vacancy Search & Filters', url: '/assets/projects/job-portal.png', caption: 'ReactJS portal with instant search, category navigation, and employment status filters' },
+      { title: 'Administrative Vacancy Management', url: '/assets/projects/job-portal-admin.png', caption: 'Authenticated administrative portal for listing creation and applicant pipeline tracking' }
     ],
     downloads: {
       primary: { label: 'Download Job Portal Specs (.md)', type: 'spec' },
@@ -156,9 +169,11 @@ export const PROJECTS_DATA_EN: Project[] = [
       { name: 'GOS Absen', url: '#', description: 'Employee attendance app for check-ins, leave/sick requests, and selfie verification.' },
       { name: 'GOS Admin', url: '#', description: 'Administrative portal for managing companies, staff, attendance rules, and payroll exports.' }
     ],
-    imageUrl: 'https://images.unsplash.com/photo-1551836022-d5d88e9218df?auto=format&fit=crop&w=1200&q=80',
+    imageUrl: '/assets/projects/gos-login.png',
     screenshots: [
-      { title: 'GOS Attendance & Mobile Clock-in', url: 'https://images.unsplash.com/photo-1551836022-d5d88e9218df?auto=format&fit=crop&w=1200&q=80', caption: 'Workforce Attendance with Geolocation and Selfie Verification' }
+      { title: 'GOS Absen Dashboard', url: '/assets/projects/gos-absen-1.png', caption: 'Dashboard absen' },
+      { title: 'Mobile Clock-in with Geolocation & Selfie', url: '/assets/projects/gos-absen-2.png', caption: 'Employee mobile attendance clock-in with geofence radius check and MinIO selfie verification' },
+      { title: 'GOS Admin Portal & Shift Scheduling', url: '/assets/projects/gos-admin.png', caption: 'Enterprise management for multi-branch workplaces, shift allocations, and leave approval' }
     ],
     downloads: {
       primary: { label: 'Download GOS Architecture Spec (.md)', type: 'spec' },
@@ -205,10 +220,10 @@ export const PROJECTS_DATA_EN: Project[] = [
       { label: 'Scheduling', value: 'Autonomous', desc: 'Windows Task Scheduler recurring batch' },
       { label: 'Data Parsing', value: 'Python Engine', desc: 'Real-time CSV & API transformation' }
     ],
-    stack: ['Laravel 10', 'PHP', 'Python', 'Bootstrap', 'TailwindCSS', 'ApexCharts', 'PostgreSQL', 'Apache', 'Windows Server', 'Windows Task Scheduler', 'XAMPP'],
-    imageUrl: 'https://images.unsplash.com/photo-1581092160607-ee22621dd758?auto=format&fit=crop&w=1200&q=80',
+    stack: ['Laravel 10', 'Python', 'Bootstrap', 'PostgreSQL', 'Windows Server', 'XAMPP'],
+    imageUrl: '/assets/projects/egateway-login.png',
     screenshots: [
-      { title: 'Egateway CEMS Monitoring Gateway', url: 'https://images.unsplash.com/photo-1581092160607-ee22621dd758?auto=format&fit=crop&w=1200&q=80', caption: 'On-premise Industrial Emission Telemetry Gateway' }
+      { title: 'Industrial Stack Emission Dashboard Panel', url: '/assets/projects/egateway-dashboard.png', caption: 'Continuous industrial gas analysis parameters (SO2, NOx, CO, O2, Particulate)' }
     ],
     architecture: {
       flowDescription: 'CEMS instruments at industrial sites generate continuous emission monitoring data. Incoming data is received through APIs or CSV files, processed and normalized by Python jobs, stored in PostgreSQL, and handled by the Laravel-based Egateway application before being transmitted to SISPEK KLHK.',
@@ -272,9 +287,9 @@ export const PROJECTS_DATA_EN: Project[] = [
       ]
     },
     liveUrl: 'https://dashboard.greenteams.co/',
-    imageUrl: 'https://images.unsplash.com/photo-1532601224476-15c79f2f7a51?auto=format&fit=crop&w=1200&q=80',
+    imageUrl: '/assets/projects/dpu.png',
     screenshots: [
-      { title: 'AQMS Live Monitoring Dashboard', url: 'https://images.unsplash.com/photo-1532601224476-15c79f2f7a51?auto=format&fit=crop&w=1200&q=80', caption: 'Real-time air quality dashboard with AI predictive forecasting' }
+      { title: 'Air Quality Conversational AI Assistant', url: '/assets/projects/dpu-chatbot.png', caption: 'Interactive assistant providing environmental index analysis and health advisories' }
     ],
     downloads: {
       primary: { label: 'Download AQMS Dashboard Architecture (.md)', type: 'spec' },
@@ -322,9 +337,11 @@ export const PROJECTS_DATA_EN: Project[] = [
       ]
     },
     liveUrl: 'https://dashboards.trusur.tech/',
-    imageUrl: 'https://images.unsplash.com/photo-1460925895917-afdab827c52f?auto=format&fit=crop&w=1200&q=80',
+    imageUrl: '/assets/projects/erp-login.png',
     screenshots: [
-      { title: 'Trusur ERP Enterprise Dashboard', url: 'https://images.unsplash.com/photo-1460925895917-afdab827c52f?auto=format&fit=crop&w=1200&q=80', caption: 'Web-based Enterprise Resource Planning (ERP) platform' }
+      { title: 'ERP Operational & Financial Dashboard', url: '/assets/projects/erp-menu.png', caption: 'Executive overview of daily transactions, active sales orders, and balance sheets' },
+      { title: 'ERP Procedures Menu', url: '/assets/projects/erp-menu-1.png', caption: 'Procedur menu' }
+
     ],
     downloads: {
       primary: { label: 'Download Trusur ERP Overview (.md)', type: 'spec' },
@@ -375,9 +392,10 @@ export const PROJECTS_DATA_EN: Project[] = [
       ]
     },
     liveUrl: 'https://aqms.trusur.tech/login',
-    imageUrl: 'https://images.unsplash.com/photo-1504868584819-f8e8b4b6d7e3?auto=format&fit=crop&w=1200&q=80',
+    imageUrl: '/assets/projects/aqms-login.png',
     screenshots: [
-      { title: 'AQMS Legacy Performance & Database Optimization', url: 'https://images.unsplash.com/photo-1504868584819-f8e8b4b6d7e3?auto=format&fit=crop&w=1200&q=80', caption: 'Database profiling and query optimization dashboard' }
+      { title: 'Reports', url: '/assets/projects/aqms-report.png', caption: 'Comprehensive reports on AQMS data and analytics' },
+      { title: 'Maps', url: '/assets/projects/aqms-maps.png', caption: 'Maps showing AQMS sensor locations and data visualization' }
     ],
     downloads: {
       primary: { label: 'Download Optimization Case Study (.md)', type: 'spec' },
@@ -417,10 +435,12 @@ export const PROJECTS_DATA_EN: Project[] = [
       { label: 'Edge Resilience', value: 'Store & Forward', desc: 'Buffer data locally during internet loss' },
       { label: 'Remote Support', value: 'TeamViewer', desc: 'Unattended remote management' }
     ],
-    stack: ['Python', 'PHP', 'Linux MX', 'Apache', 'MariaDB', 'Cron', 'Serial Communication', 'USB', 'TeamViewer'],
-    imageUrl: 'https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&fit=crop&w=1200&q=80',
+    stack: ['Python', 'Code Igniter', 'Linux', 'Apache', 'MariaDB', 'Cron', 'Serial Communication', 'TeamViewer'],
+    imageUrl: '/assets/projects/efs-sensor.png',
     screenshots: [
-      { title: 'EFS AQMS Edge Embedded System', url: 'https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&fit=crop&w=1200&q=80', caption: 'Autonomous Linux Edge Computing System for AQMS Telemetry' }
+      { title: 'Linux MX', url: '/assets/projects/efs-linux.png', caption: 'Linux-based operating system used for development, server administration, system configuration, troubleshooting, and deployment.' },
+      { title: 'AQMS-EFS Sensor', url: '/assets/projects/efs-sensor.png', caption: 'Store-and-forward architecture ensuring zero telemetry packet loss during outages' },
+      { title: 'AQMS-EFS Warehouse', url: '/assets/projects/efs-warehouse.png', caption: 'Store-and-forward architecture ensuring zero telemetry packet loss during outages' },
     ],
     architecture: {
       flowDescription: 'AQMS sensors connected through PLC and communication hardware send measurement data to the EFS edge device. The EFS system reads and processes the sensor data through Python services, stores or manages the data locally, and forwards the processed data to the centralized AQMS Dashboard.',
@@ -487,9 +507,28 @@ export const PROJECTS_DATA_EN: Project[] = [
       { name: 'Caltax Tax Service', url: 'https://tax-caltax-dev.cetta.tech/' },
       { name: 'Caltax AI Service', url: 'https://ai-caltax-dev.cetta.tech/' }
     ],
-    imageUrl: 'https://images.unsplash.com/photo-1554224155-8d04cb21cd6c?auto=format&fit=crop&w=1200&q=80',
+    imageUrl: '/assets/projects/caltax-login.png',
     screenshots: [
-      { title: 'Caltax AI Tax Architecture', url: 'https://images.unsplash.com/photo-1554224155-8d04cb21cd6c?auto=format&fit=crop&w=1200&q=80', caption: 'FastAPI microservices and RAG-based AI taxation assistant' }
+      {
+        title: 'Caltax Login',
+        url: '/assets/projects/caltax-login.png',
+        caption: 'Secure user authentication for accessing the Caltax application and its tax-related features'
+      },
+      {
+        title: 'Caltax Dashboard',
+        url: '/assets/projects/caltax-dashboard.png',
+        caption: 'Main dashboard providing access to tax calculation, AI assistant, and other application features'
+      },
+      {
+        title: 'Caltax AI Chat',
+        url: '/assets/projects/caltax-ai-chat.png',
+        caption: 'AI-powered chat assistant for answering tax-related questions and retrieving relevant Indonesian tax regulations'
+      },
+      {
+        title: 'AI Service — FastAPI & Swagger',
+        url: '/assets/projects/caltax-ai-service.png',
+        caption: 'FastAPI-based AI service with Swagger documentation for testing and managing AI-related API endpoints'
+      }
     ],
     downloads: {
       primary: { label: 'Download Caltax Architecture Spec (.md)', type: 'spec' },
@@ -536,9 +575,18 @@ export const PROJECTS_DATA_EN: Project[] = [
       ]
     },
     liveUrl: 'https://saas-pos-umkm.vercel.app/',
-    imageUrl: 'https://images.unsplash.com/photo-1556742049-0a67e557224f?auto=format&fit=crop&w=1200&q=80',
+    imageUrl: '/assets/projects/pos-login.png',
     screenshots: [
-      { title: 'SaaS POS UMKM Cashier Interface', url: 'https://images.unsplash.com/photo-1556742049-0a67e557224f?auto=format&fit=crop&w=1200&q=80', caption: 'Point of Sale platform for small culinary businesses' }
+      {
+        'title': 'POS UMKM Login',
+        'url': '/assets/projects/pos-login.png',
+        'caption': 'Halaman autentikasi pengguna untuk mengakses sistem POS dan fitur manajemen bisnis UMKM'
+      },
+      {
+        'title': 'POS UMKM Dashboard',
+        'url': '/assets/projects/pos-dashboard.png',
+        'caption': 'Dashboard utama setelah login untuk mengakses berbagai fitur dan memantau aktivitas bisnis dalam satu tampilan'
+      }
     ],
     downloads: {
       primary: { label: 'Download POS System Specs (.md)', type: 'spec' },
@@ -587,7 +635,9 @@ export const PROJECTS_DATA_EN: Project[] = [
     liveUrl: 'https://sukavillage-v7.vercel.app/',
     imageUrl: 'https://images.unsplash.com/photo-1566073771259-6a8506099945?auto=format&fit=crop&w=1200&q=80',
     screenshots: [
-      { title: 'Suka Village Destination Showcase', url: 'https://images.unsplash.com/photo-1566073771259-6a8506099945?auto=format&fit=crop&w=1200&q=80', caption: 'Full-stack hospitality and retreat destination platform' }
+      { title: 'Villa Lodging & Accommodation Catalog', url: 'https://images.unsplash.com/photo-1566073771259-6a8506099945?auto=format&fit=crop&w=1200&q=80', caption: 'Visual gallery with amenity breakdowns, guest capacity limits, and pricing' },
+      { title: 'Restaurant Dining & Outdoor Activities', url: 'https://images.unsplash.com/photo-1517248135467-4c7edcad34c4?auto=format&fit=crop&w=1200&q=80', caption: 'Culinary dining selections and corporate retreat packages' },
+      { title: 'Private Event Reservation Request Form', url: 'https://images.unsplash.com/photo-1522071820081-009f0129c71c?auto=format&fit=crop&w=1200&q=80', caption: 'Inquiry and scheduling workflow for weddings and group gatherings' }
     ],
     downloads: {
       primary: { label: 'Download Suka Village Specs (.md)', type: 'spec' },
