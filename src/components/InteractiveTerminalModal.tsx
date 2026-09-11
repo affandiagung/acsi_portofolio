@@ -130,7 +130,7 @@ export const InteractiveTerminalModal: React.FC<InteractiveTerminalModalProps> =
             <p className="text-emerald-400 font-semibold">Core Technical Stack:</p>
             <div><span className="text-slate-400">Backend:</span> Python (FastAPI), PHP (Laravel, CodeIgniter), Node.js (NestJS), Bun (Elysia)</div>
             <div><span className="text-slate-400">Databases:</span> PostgreSQL (Partitioning, MatViews), Redis (Caching), MySQL</div>
-            <div><span className="text-slate-400">AI & RAG:</span> OpenAI API, LLM Model, Prompt Engineering, Semantic Chunking</div>
+            <div><span className="text-slate-400">AI & RAG:</span> , LLM Model, Prompt Engineering, Semantic Chunking</div>
             <div><span className="text-slate-400">Infra & DevOps:</span> Docker, Linux (Ubuntu/CentOS), Nginx, GitLab CI/CD</div>
           </div>
         );

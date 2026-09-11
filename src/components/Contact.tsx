@@ -44,9 +44,9 @@ export const Contact: React.FC<ContactProps> = ({ data }) => {
               {t('contact.title')}
             </h2>
             
-            <p className="text-slate-600 dark:text-slate-300 text-sm sm:text-base leading-relaxed">
+            {/* <p className="text-slate-600 dark:text-slate-300 text-sm sm:text-base leading-relaxed">
               {t('contact.subtitle')}
-            </p>
+            </p> */}
 
             {/* Direct Contact Badges */}
             <div className="space-y-3 pt-2">

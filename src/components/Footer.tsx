@@ -73,8 +73,8 @@ export const Footer: React.FC<FooterProps> = ({ data, onOpenTerminal }) => {
 
         <div className="mt-8 flex flex-col sm:flex-row items-center justify-between gap-4 text-slate-500 dark:text-slate-400 text-[11px]">
           <div className="flex items-center gap-2">
-            <span className="w-2 h-2 rounded-full bg-emerald-500 dark:bg-emerald-400" />
-            <span>{language === 'id' ? 'Pipeline Telemetri Aktif · 99.9% Uptime SLA' : 'Telemetry Pipeline Active · 99.9% Uptime SLA'}</span>
+            {/* <span className="w-2 h-2 rounded-full bg-emerald-500 dark:bg-emerald-400" /> */}
+            {/* <span>{language === 'id' ? 'Pipeline Telemetri Aktif · 99.9% Uptime SLA' : 'Telemetry Pipeline Active · 99.9% Uptime SLA'}</span> */}
           </div>
 
           <div>

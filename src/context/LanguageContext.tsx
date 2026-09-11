@@ -166,7 +166,7 @@ const UI_TRANSLATIONS: Record<Language, Record<string, string>> = {
 
     // Contact
     'contact.badge': 'MARI BERDISKUSI',
-    'contact.title': 'Mari Berkolaborasi atau Diskusikan Kebutuhan Sistem Anda',
+    'contact.title': 'Mari Terhubung',
     'contact.subtitle': 'Saya terbuka untuk posisi Software Engineer (Full-time / Kontrak / Konsultan) serta proyek ERP, Website SaaS, Setup Server VPS, dan AI.',
     'contact.name': 'Nama Lengkap',
     'contact.namePlaceholder': 'Nama Anda atau Perusahaan',
@@ -370,7 +370,7 @@ const UI_TRANSLATIONS: Record<Language, Record<string, string>> = {
 
     // Contact
     'contact.badge': 'GET IN TOUCH',
-    'contact.title': "Let's Connect or Discuss Your Engineering Needs",
+    'contact.title': "Let's Connect",
     'contact.subtitle': 'Open to Software Engineer roles (Full-time / Contract / Consulting) as well as ERP, SaaS Websites, VPS Server Setup, and AI projects.',
     'contact.name': 'Full Name',
     'contact.namePlaceholder': 'Your name or company',

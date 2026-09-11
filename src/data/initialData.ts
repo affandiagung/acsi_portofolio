@@ -27,7 +27,7 @@ export const INITIAL_PORTFOLIO_DATA_EN: PortfolioData = {
     phone: '+62858 1317 7600',
     domicile: 'South Tangerang, Banten, Indonesia',
     github: 'https://github.com/affandiagung',
-    linkedin: 'linkedin.com/in/affandi-agung',
+    linkedin: 'https://linkedin.com/in/affandi-agung',
     portfolioUrl: 'https://affandiagung.github.io/',
     openToRelocation: 'Open to relocation across Indonesia and internationally'
   },
@@ -320,7 +320,7 @@ CMD ["uvicorn", "main:app", "--host", "0.0.0.0", "--port", "8000", "--workers", 
         { name: 'SQL (PostgreSQL , MySQL / MariaDB, SQLite)', highlight: true },
         { name: 'NoSQL ( MongoDB )', highlight: true },
         { name: 'Redis (Caching & Queues)', highlight: true },
-        { name: 'Prisma ORM & Eloquent', highlight: true },
+        { name: 'Prisma ORM , SQL Alchemy & Eloquent', highlight: true },
         { name: 'Query Optimization (EXPLAIN)', highlight: true }
       ]
     },
@@ -329,7 +329,7 @@ CMD ["uvicorn", "main:app", "--host", "0.0.0.0", "--port", "8000", "--workers", 
       description: 'LLM integration, retrieval systems, and sensor processing',
       skills: [
         { name: 'RAG (Retrieval Augmented Generation)', highlight: true },
-        { name: 'OpenAI API & Anthropic Models', highlight: true },
+        { name: 'AI & LLM', highlight: true },
         { name: 'Ollama (Local LLMs)', highlight: true },
         { name: 'Prompt Engineering & Chunking', highlight: true },
         { name: 'Time-Series Data Aggregation', highlight: true },

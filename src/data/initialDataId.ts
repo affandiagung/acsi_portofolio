@@ -24,7 +24,7 @@ export const INITIAL_PORTFOLIO_DATA_ID: PortfolioData = {
     phone: '+62858 1317 7600',
     domicile: 'Tangerang Selatan, Banten, Indonesia',
     github: 'https://github.com/affandiagung',
-    linkedin: 'linkedin.com/in/affandi-agung',
+    linkedin: 'https://linkedin.com/in/affandi-agung',
     portfolioUrl: 'https://affandiagung.github.io/',
     openToRelocation: 'Terbuka untuk relokasi di seluruh wilayah Indonesia maupun internasional (ASEAN, Jepang, UEA)'
   },
@@ -267,7 +267,7 @@ def hybrid_retrieve(query: str, top_k: int = 5):
         { name: 'SQL (PostgreSQL, MySQL / MariaDB, SQLite)', highlight: true },
         { name: 'NoSQL (MongoDB)', highlight: true },
         { name: 'Redis (Caching & Queues)', highlight: true },
-        { name: 'Prisma ORM & Eloquent', highlight: true },
+        { name: 'Prisma ORM, SQL Alchemy & Eloquent', highlight: true },
         { name: 'Optimasi Query (EXPLAIN)', highlight: true }
       ]
     },
@@ -277,7 +277,7 @@ def hybrid_retrieve(query: str, top_k: int = 5):
       description: 'Integrasi LLM, sistem retrieval, dan pemrosesan data sensor',
       skills: [
         { name: 'RAG (Retrieval Augmented Generation)', highlight: true },
-        { name: 'OpenAI API & Anthropic Models', highlight: true },
+        { name: 'AI & LLM', highlight: true },
         { name: 'Ollama (Local LLMs)', highlight: true },
         { name: 'Prompt Engineering & Chunking', highlight: true },
         { name: 'Agregasi Data Time-Series', highlight: true },
@@ -447,7 +447,7 @@ Server VPS baru yang tersambung ke IP publik sering kali mulai menerima serangan
 Pencarian vektor (Dense Retrieval) sangat handal menangkap arti semantik secara umum, namun sering gagal ketika user mencari pasal spesifik seperti *"Pasal 21 ayat 5 huruf b UU KUP"*. Nilai embedding sering tertukar dengan pasal lain yang memiliki tema serupa.
 
 ### Solusi: Arsitektur Hybrid RAG
-1. **Dense Retrieval (LLM Model / OpenAI):** Menangkap kemiripan konsep hukum dan konteks pertanyaan.
+1. **Dense Retrieval (AI & LLM Model):** Menangkap kemiripan konsep hukum dan konteks pertanyaan.
 2. **Sparse Retrieval (BM25):** Menjamin kecocokan tepat pada kata kunci istilah perpajakan dan nomor pasal tertentu.
 3. **Penyatuan Skor (Reciprocal Rank Fusion):** Menggabungkan 20 kandidat teratas dari masing-masing pencari.
 4. **Cross-Encoder Reranking:** Model reranker menilai relevansi pasangan (Pertanyaan, Teks Potongan) dan mengambil 5 potongan dokumen paling akurat untuk diserahkan ke prompt LLM.
