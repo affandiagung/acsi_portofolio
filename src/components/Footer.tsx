@@ -38,7 +38,7 @@ export const Footer: React.FC<FooterProps> = ({ data, onOpenTerminal }) => {
               {language === 'id' ? 'Proyek' : 'Projects'}
             </a>
             <a href="#methodology" className="hover:text-emerald-700 dark:hover:text-emerald-400 transition-colors">
-              {language === 'id' ? 'Metodologi' : 'Workflow (01-06)'}
+              {language === 'id' ? 'Metodologi' : 'Workflow'}
             </a>
             <a href="#tech-stack" className="hover:text-emerald-700 dark:hover:text-emerald-400 transition-colors">
               {language === 'id' ? 'Tech Stack' : 'Tech Stack'}

@@ -26,7 +26,7 @@ export const Navbar: React.FC<NavbarProps> = ({ data, onOpenTerminal }) => {
 
   const navLinks = [
     { name: language === 'id' ? 'Proyek' : 'Projects', href: '#projects' },
-    { name: language === 'id' ? 'Metodologi' : 'Workflow (01-06)', href: '#methodology' },
+    { name: language === 'id' ? 'Metodologi' : 'Workflow', href: '#methodology' },
     { name: language === 'id' ? 'Tech Stack' : 'Tech Stack', href: '#tech-stack' },
     { name: language === 'id' ? 'Pengalaman' : 'Experience', href: '#experience' },
     { name: language === 'id' ? 'Kontak' : 'Contact', href: '#contact' },

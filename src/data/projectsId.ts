@@ -394,7 +394,7 @@ export const PROJECTS_DATA_ID: Project[] = [
     imageUrl: '/assets/projects/aqms-login.png',
     screenshots: [
       { title: 'Laporan', url: '/assets/projects/aqms-report.png', caption: 'Laporan komprehensif tentang data dan analisis AQMS' },
-      { title: 'Peta', url: '/assets/projects/aqms-maps.png', caption: 'Peta menunjukkan lokasi sensor AQMS dan visualisasi data' }
+      { title: 'Peta', url: '/assets/projects/aqms-map.png', caption: 'Peta menunjukkan lokasi sensor AQMS dan visualisasi data' }
     ],
     downloads: {
       primary: { label: 'Unduh Studi Kasus Optimasi (.md)', type: 'spec' },
@@ -647,8 +647,8 @@ export const PROJECTS_DATA_ID: Project[] = [
     imageUrl: '/assets/projects/sukavillage.png',
     screenshots: [
       { title: 'Katalog Villa & Akomodasi Eksklusif', url: '/assets/projects/sukavillage-villa.png', caption: 'Galeri visual penginapan dengan detail fasilitas, kapasitas tamu, dan harga sewa' },
-      { title: 'Menu Kuliner Restoran & Aktivitas Outdoor', url: '/assets/projects/sukavillage-restaurant.png', caption: 'Daftar sajian khas kuliner dan paket rekreasi outbound keluarga atau gathering perusahaan' },
-      { title: 'Formulir Reservasi Event & Kontak Pengelola', url: '/assets/projects/sukavillage-event.png', caption: 'Alur pengajuan booking tempat dan konsultasi acara privat' }
+      { title: 'Menu Kuliner Restoran & Aktivitas Outdoor', url: '/assets/projects/sukavillage-dine.png', caption: 'Daftar sajian khas kuliner dan paket rekreasi outbound keluarga atau gathering perusahaan' },
+      { title: 'Formulir Reservasi Event & Kontak Pengelola', url: '/assets/projects/sukavillage-reserve.png', caption: 'Alur pengajuan booking tempat dan konsultasi acara privat' }
     ],
     downloads: {
       primary: { label: 'Unduh Spek Suka Village (.md)', type: 'spec' },

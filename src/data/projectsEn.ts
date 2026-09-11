@@ -395,7 +395,7 @@ export const PROJECTS_DATA_EN: Project[] = [
     imageUrl: '/assets/projects/aqms-login.png',
     screenshots: [
       { title: 'Reports', url: '/assets/projects/aqms-report.png', caption: 'Comprehensive reports on AQMS data and analytics' },
-      { title: 'Maps', url: '/assets/projects/aqms-maps.png', caption: 'Maps showing AQMS sensor locations and data visualization' }
+      { title: 'Maps', url: '/assets/projects/aqms-map.png', caption: 'Maps showing AQMS sensor locations and data visualization' }
     ],
     downloads: {
       primary: { label: 'Download Optimization Case Study (.md)', type: 'spec' },
@@ -636,8 +636,8 @@ export const PROJECTS_DATA_EN: Project[] = [
     imageUrl: '/assets/projects/sukavillage.png',
     screenshots: [
       { title: 'Villa Lodging & Accommodation Catalog', url: '/assets/projects/sukavillage-villa.png', caption: 'Visual gallery with amenity breakdowns, guest capacity limits, and pricing' },
-      { title: 'Restaurant Dining & Outdoor Activities', url: '/assets/projects/sukavillage-restaurant.png', caption: 'Culinary dining selections and corporate retreat packages' },
-      { title: 'Private Event Reservation Request Form', url: '/assets/projects/sukavillage-event.png', caption: 'Inquiry and scheduling workflow for weddings and group gatherings' }
+      { title: 'Restaurant Dining & Outdoor Activities', url: '/assets/projects/sukavillage-dine.png', caption: 'Culinary dining selections and corporate retreat packages' },
+      { title: 'Private Event Reservation Request Form', url: '/assets/projects/sukavillage-reserve.png', caption: 'Inquiry and scheduling workflow for weddings and group gatherings' }
     ],
     downloads: {
       primary: { label: 'Download Suka Village Specs (.md)', type: 'spec' },

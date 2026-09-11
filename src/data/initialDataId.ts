@@ -307,7 +307,7 @@ def hybrid_retrieve(query: str, top_k: int = 5):
         { name: 'Nginx & Reverse Proxy', highlight: true },
         { name: 'CI/CD (GitLab, GitHub Actions)', highlight: true },
         { name: 'AWS & Cloud Hosting', highlight: true },
-        { name: 'Windows Server & On-Premise', highlight: false },
+        { name: 'Windows Server & On-Premise', highlight: true },
         { name: 'Git & Version Control', highlight: true }
       ]
     }
