@@ -20,7 +20,7 @@ export const PROJECTS_DATA_ID: Project[] = [
     businessPurpose: 'Digunakan oleh BAKTI Kominfo (Badan Aksesibilitas Telekomunikasi dan Informasi) untuk mengelola dan memantau kegiatan operasional proyek telekomunikasi di Indonesia.',
     role: ['Pengembang Backend'],
     problem: '10.000+ lokasi BTS di seluruh Indonesia menghasilkan volume data telemetri yang sangat besar dari sumber-sumber yang bervariasi (API, FTP, SFTP, CSV, Excel, dan file log). Format yang tidak konsisten dan skala data yang masif membuat pelaporan real-time, ekspor file Excel, dan penyesuaian kebutuhan mingguan dari user menjadi sangat menantang.',
-    solution: 'Membangun backend ingestion dan agregasi data berkinerja tinggi menggunakan Python, Go, dan Node.js/NestJS. Mempartisi tabel database PostgreSQL dengan materialized view, menerapkan antrean worker BullMQ, serta menghangatkan lapisan cache Redis untuk query KPI berkecepatan sub-detik.',
+    solution: 'Membangun backend ingestion dan agregasi data berkinerja tinggi menggunakan Python, Go, dan Javascript (NodeJS). Mempartisi tabel database PostgreSQL dengan materialized view, menerapkan antrean worker BullMQ, serta menghangatkan lapisan cache Redis untuk query KPI berkecepatan sub-detik.',
     technicalChallenges: [
       '10.000+ BTS di seluruh Indonesia menghasilkan data dari API, FTP, SFTP, CSV, Excel, dan file log',
       'Format data yang tidak konsisten memerlukan parsing, validasi, dan normalisasi ekstensif',
@@ -30,7 +30,7 @@ export const PROJECTS_DATA_ID: Project[] = [
     ],
     keyContributions: [
       'Membangun pipeline pengumpulan data dari berbagai sumber jarak jauh (FTP, SFTP, CSV, Excel, file log)',
-      'Mengimplementasikan pemrosesan, validasi, dan normalisasi data menggunakan Python, Node.js, dan Go',
+      'Mengimplementasikan pemrosesan, validasi, dan normalisasi data menggunakan Python, Javascript (NodeJS), dan Go',
       'Mengagregasi data telemetri menjadi KPI operasional pada berbagai interval (dari 15 menit hingga bulanan)',
       'Merancang skema database PostgreSQL dengan partisi time-series dan materialized view',
       'Menerapkan lapisan cache Redis untuk pengambilan cepat KPI operasional dan snapshot kesehatan sistem',
@@ -42,12 +42,12 @@ export const PROJECTS_DATA_ID: Project[] = [
       { label: 'Agregasi Data', value: '15m s/d Bulanan', desc: 'Rollup otomatis KPI multi-interval' },
       { label: 'Cache Hit Rate', value: '99.4%', desc: 'Cache in-memory Redis untuk dashboard' }
     ],
-    stack: ['Python', 'Golang', 'NodeJS', 'NestJS', 'TypeScript', 'PostgreSQL', 'MongoDB', 'Redis', 'BullMQ', 'Worker', 'Nginx', 'PM2', 'Ubuntu Server'],
+    stack: ['Python', 'Golang', 'NestJS', 'TypeScript', 'PostgreSQL', 'MongoDB', 'Redis', 'BullMQ', 'Worker', 'Nginx', 'PM2', 'Ubuntu Server'],
     architecture: {
       flowDescription: 'Data mengalir dari 10.000+ pemantau BTS jarak jauh melalui worker pemrosesan ke tabel PostgreSQL berpartisi, dihangatkan ke cache Redis, dan disajikan melalui REST API teroptimasi ke dashboard administratif.',
       steps: [
         { title: 'Lokasi BTS Edge', desc: '10.000+ pemantau telekomunikasi jarak jauh mentransmisikan data telemetri mentah', tag: 'Sumber Data' },
-        { title: 'Pipeline Data', desc: 'Job Python, Node.js, dan Go memproses dan memvalidasi data FTP, SFTP, CSV, Excel, dan log, lalu mengagregasi KPI interval 15 menit hingga bulanan', tag: 'Pemrosesan' },
+        { title: 'Pipeline Data', desc: 'Job Python, Javascript (NodeJS), dan Go memproses dan memvalidasi data FTP, SFTP, CSV, Excel, dan log, lalu mengagregasi KPI interval 15 menit hingga bulanan', tag: 'Pemrosesan' },
         { title: 'Arsitektur PostgreSQL', desc: 'Database PostgreSQL terintegrasi dengan partisi time-series, agregasi KPI multi-interval, dan materialized view', tag: 'Penyimpanan' },
         { title: 'Lapisan Cache Redis', desc: 'Pengambilan cepat di memori (in-memory) untuk 15+ KPI operasional dan snapshot kesehatan sistem', tag: 'Cache' },
         { title: 'API Pelaporan', desc: 'Berbagai endpoint analitis yang mendukung aplikasi pemantauan, pelaporan, dan dashboard', tag: 'Pengiriman' }
@@ -99,7 +99,7 @@ export const PROJECTS_DATA_ID: Project[] = [
       { label: 'Operasi Data', value: 'CRUD Lengkap', desc: 'Tambah, baca, ubah, dan hapus' },
       { label: 'Dukungan Layar', value: 'Responsif', desc: 'Optimal di ponsel dan desktop' }
     ],
-    stack: ['ReactJS', 'JavaScript', 'HTML', 'CSS', 'REST API', 'Autentikasi', 'CRUD'],
+    stack: ['ReactJS', 'JavaScript', 'HTML', 'CSS', 'REST API', 'Authentication', 'Admin CPanel', 'UI/UX Design'],
     architecture: {
       flowDescription: 'Aplikasi web berbasis React yang menyediakan fitur penelusuran lowongan publik serta fungsionalitas administratif terautentikasi untuk mengelola daftar pekerjaan.',
       steps: [
@@ -153,7 +153,7 @@ export const PROJECTS_DATA_ID: Project[] = [
       { label: 'Basis Data', value: 'PostgreSQL', desc: 'Log transaksi presensi ACID' },
       { label: 'Alur Kerja', value: 'Cuti & Sakit', desc: 'Alur persetujuan terintegrasi' }
     ],
-    stack: ['CodeIgniter 3', 'PHP', 'JavaScript', 'jQuery', 'Bootstrap 3', 'DataTables', 'PostgreSQL', 'Apache', 'Google Maps API', 'MinIO'],
+    stack: ['CodeIgniter 3', 'JavaScript', 'jQuery', 'Bootstrap 3', 'DataTables', 'PostgreSQL', 'Apache', 'Google Maps API', 'MinIO'],
     architecture: {
       flowDescription: 'Sistem terdiri dari aplikasi presensi karyawan dan aplikasi manajemen administratif yang terhubung ke backend bersama dan database PostgreSQL. Presensi divalidasi dengan geolokasi dan foto selfie yang disimpan di MinIO object storage.',
       steps: [
@@ -274,7 +274,7 @@ export const PROJECTS_DATA_ID: Project[] = [
       { label: 'Mesin Backend', value: 'Bun + Elysia', desc: 'Runtime TypeScript throughput tinggi' },
       { label: 'Engine EWS', value: 'Berbasis LLM', desc: 'Peringatan dini anomali kualitas udara' }
     ],
-    stack: ['Svelte', 'TailwindCSS', 'Google Maps API', 'Elysia', 'Bun', 'Prisma', 'PostgreSQL', 'Redis', 'JWT', 'Swagger', 'LLM'],
+    stack: ['Svelte', 'TailwindCSS', 'Google Maps API', 'Elysia', 'Bun', 'Prisma', 'PostgreSQL', 'Redis', 'AI/LLM Predictive Models', 'Ubuntu Server'],
     architecture: {
       flowDescription: 'Data sensor AQMS diproses dan disajikan melalui API backend ke dashboard interaktif, di mana pengukuran real-time divisualisasikan pada grafik dan peta spasial. Pemrosesan berbasis AI/LLM digunakan untuk pemodelan data, peramalan, dan visualisasi Early Warning System (EWS).',
       steps: [
@@ -326,7 +326,7 @@ export const PROJECTS_DATA_ID: Project[] = [
       { label: 'Keandalan', value: 'SLA Produksi', desc: 'Nol gangguan saat pembaruan fitur' },
       { label: 'Keamanan', value: 'RBAC', desc: 'Hak akses berbasis peran user' }
     ],
-    stack: ['Web Application', 'PHP', 'MySQL', 'JavaScript', 'Bootstrap', 'REST API'],
+    stack: ['Web Application', 'CodeIgniter', 'MySQL', 'JavaScript', 'Bootstrap', 'REST API'],
     architecture: {
       flowDescription: 'Aplikasi ERP berbasis web mendukung proses bisnis dan operasional perusahaan melalui modul dan fitur yang terintegrasi secara utuh.',
       steps: [
@@ -379,7 +379,7 @@ export const PROJECTS_DATA_ID: Project[] = [
       { label: 'Kompleksitas', value: 'O(n) → O(1)', desc: 'Optimasi algoritma pengambilan data' },
       { label: 'Query N+1', value: '0 Loop Calls', desc: 'Menghilangkan query relasional berulang' }
     ],
-    stack: ['CodeIgniter 4', 'PHP', 'MySQL', 'Database Indexing', 'Query Optimization'],
+    stack: ['CodeIgniter', 'PHP', 'MySQL', 'Database Indexing', 'Query Optimization'],
     architecture: {
       flowDescription: 'Data pemantauan AQMS ditarik melalui API backend dan diproses menggunakan CodeIgniter 4 sebelum disajikan ke dashboard web. Hambatan performa diselesaikan lewat optimasi query, strategi akses data yang efisien, dan penerapan indeks database yang tepat.',
       steps: [
@@ -501,7 +501,7 @@ export const PROJECTS_DATA_ID: Project[] = [
       { label: 'Respon AI', value: 'SSE Streaming', desc: 'Aliran token interaktif real-time' },
       { label: 'Operasional', value: 'PM2 + Nginx', desc: 'Deployment server Linux dengan CI/CD' }
     ],
-    stack: ['Python', 'FastAPI', 'REST API', 'Microservices', 'PostgreSQL', 'LLM', 'RAG', 'Vector Database', 'ChromaDB', 'Ollama', 'CI/CD', 'Linux', 'PM2', 'Nginx'],
+    stack: ['Python', 'FastAPI', 'Microservices', 'PostgreSQL', 'AI/LLM Model', 'RAG', 'Vector Database', 'CI/CD', 'Linux', 'PM2', 'Nginx'],
     architecture: {
       flowDescription: 'Caltax menerapkan arsitektur microservices di mana pengelolaan user, master data, pemrosesan pajak, dan fungsionalitas AI ditangani oleh service terpisah yang berkomunikasi melalui API untuk menghadirkan alur kerja terpadu.',
       steps: [
@@ -576,7 +576,7 @@ export const PROJECTS_DATA_ID: Project[] = [
       { label: 'Tipe Platform', value: 'Cloud SaaS', desc: 'Arsitektur web multi-tenant' },
       { label: 'Status Proyek', value: 'Pengembangan', desc: 'Prototipe live di Vercel' }
     ],
-    stack: ['React', 'Node.js', 'JavaScript', 'TailwindCSS', 'REST API', 'Arsitektur SaaS'],
+    stack: ['ReactJS', 'Typescript', 'TailwindCSS', 'ExpressJS', 'Supabase', 'Vite'],
     architecture: {
       flowDescription: 'Platform SaaS POS mendigitalkan operasional penjualan harian pelaku UMKM kuliner melalui aplikasi web yang terpusat dan responsif.',
       steps: [
@@ -590,7 +590,7 @@ export const PROJECTS_DATA_ID: Project[] = [
     screenshots: [
       {
         'title': 'POS UMKM Authentication',
-        'url' : '/assets/projects/pos-login.png',
+        'url': '/assets/projects/pos-login.png',
         'caption': 'User authentication for secure access to the POS platform and business management features'
       },
       {
@@ -634,7 +634,7 @@ export const PROJECTS_DATA_ID: Project[] = [
       { label: 'Cakupan Destinasi', value: 'Hospitality', desc: 'Penginapan, kuliner, dan event retret' },
       { label: 'Status Proyek', value: 'Pengembangan', desc: 'Showcase web live di Vercel' }
     ],
-    stack: ['Vue.js', 'Express.js', 'JavaScript', 'Node.js', 'TailwindCSS', 'REST API'],
+    stack: ['ReactJS', 'Typescript', 'TailwindCSS', 'ExpressJS', 'Supabase', 'Vite'],
     architecture: {
       flowDescription: 'Platform Suka Village menggunakan arsitektur full-stack dengan frontend Vue.js yang berkomunikasi dengan backend Express.js melalui REST API untuk menyajikan katalog destinasi interaktif.',
       steps: [
@@ -644,11 +644,11 @@ export const PROJECTS_DATA_ID: Project[] = [
       ]
     },
     liveUrl: 'https://sukavillage-v7.vercel.app/',
-    imageUrl: 'https://images.unsplash.com/photo-1566073771259-6a8506099945?auto=format&fit=crop&w=1200&q=80',
+    imageUrl: '/assets/projects/sukavillage.png',
     screenshots: [
-      { title: 'Katalog Villa & Akomodasi Eksklusif', url: 'https://images.unsplash.com/photo-1566073771259-6a8506099945?auto=format&fit=crop&w=1200&q=80', caption: 'Galeri visual penginapan dengan detail fasilitas, kapasitas tamu, dan harga sewa' },
-      { title: 'Menu Kuliner Restoran & Aktivitas Outdoor', url: 'https://images.unsplash.com/photo-1517248135467-4c7edcad34c4?auto=format&fit=crop&w=1200&q=80', caption: 'Daftar sajian khas kuliner dan paket rekreasi outbound keluarga atau gathering perusahaan' },
-      { title: 'Formulir Reservasi Event & Kontak Pengelola', url: 'https://images.unsplash.com/photo-1522071820081-009f0129c71c?auto=format&fit=crop&w=1200&q=80', caption: 'Alur pengajuan booking tempat dan konsultasi acara privat' }
+      { title: 'Katalog Villa & Akomodasi Eksklusif', url: '/assets/projects/sukavillage-villa.png', caption: 'Galeri visual penginapan dengan detail fasilitas, kapasitas tamu, dan harga sewa' },
+      { title: 'Menu Kuliner Restoran & Aktivitas Outdoor', url: '/assets/projects/sukavillage-restaurant.png', caption: 'Daftar sajian khas kuliner dan paket rekreasi outbound keluarga atau gathering perusahaan' },
+      { title: 'Formulir Reservasi Event & Kontak Pengelola', url: '/assets/projects/sukavillage-event.png', caption: 'Alur pengajuan booking tempat dan konsultasi acara privat' }
     ],
     downloads: {
       primary: { label: 'Unduh Spek Suka Village (.md)', type: 'spec' },

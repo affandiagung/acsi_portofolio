@@ -20,7 +20,7 @@ export const PROJECTS_DATA_EN: Project[] = [
     businessPurpose: 'Used by BAKTI Kominfo (Telecommunications and Information Accessibility Agency) to manage and monitor operational activities of telecommunication projects across Indonesia.',
     role: ['Backend Developer'],
     problem: '10,000+ remote BTS sites across Indonesia generated large volumes of telemetry data from inconsistent sources (APIs, FTP, SFTP, CSV, Excel, and log files). Inconsistent formats and sheer scale made real-time reporting, Excel exports, and weekly user requirement changes extremely challenging.',
-    solution: 'Engineered a scalable data ingestion and aggregation backend using Python, Go, and Node.js/NestJS. Partitioned PostgreSQL tables with materialized views, implemented BullMQ worker queues, and warmed a Redis cache layer for sub-second KPI queries.',
+    solution: 'Engineered a scalable data ingestion and aggregation backend using Python, Go, and Javascript (NodeJS). Partitioned PostgreSQL tables with materialized views, implemented BullMQ worker queues, and warmed a Redis cache layer for sub-second KPI queries.',
     technicalChallenges: [
       '10,000+ BTS across Indonesia generated data from APIs, FTP, SFTP, CSV, Excel, and log files',
       'Inconsistent data formats required extensive parsing, validation, and normalization',
@@ -30,7 +30,7 @@ export const PROJECTS_DATA_EN: Project[] = [
     ],
     keyContributions: [
       'Engineered data ingestion pipelines from multiple remote sources (FTP, SFTP, CSV, Excel, log files)',
-      'Implemented data processing, validation, and normalization using Python, Node.js, and Go',
+      'Implemented data processing, validation, and normalization using Python, Javascript (NodeJS), and Go',
       'Aggregated telemetry data into operational KPIs across multiple intervals (15-minute to monthly rollups)',
       'Designed PostgreSQL database schema with time-series partitioning and materialized views',
       'Implemented Redis cache layer for rapid retrieval of operational KPIs and health snapshots',
@@ -42,12 +42,12 @@ export const PROJECTS_DATA_EN: Project[] = [
       { label: 'Aggregation', value: '15m to Monthly', desc: 'Automated multi-interval KPI rollups' },
       { label: 'Cache Hit Rate', value: '99.4%', desc: 'Redis in-memory caching for dashboards' }
     ],
-    stack: ['Python', 'NodeJS', 'NestJS', 'TypeScript', 'PostgreSQL', 'MongoDB', 'Redis', 'BullMQ', 'Worker', 'Nginx', 'PM2', 'Ubuntu Server'],
+    stack: ['Python', 'NestJS', 'TypeScript', 'PostgreSQL', 'MongoDB', 'Redis', 'BullMQ', 'Worker', 'Nginx', 'PM2', 'Ubuntu Server'],
     architecture: {
       flowDescription: 'Data flows from 10K+ remote BTS collectors through ingestion workers into partitioned PostgreSQL tables, warmed into Redis cache, and served via optimized REST APIs to administrative dashboards.',
       steps: [
         { title: 'Edge BTS Sites', desc: '10,000+ remote telecom collectors transmitting raw telemetry data', tag: 'Data Source' },
-        { title: 'Data Pipeline', desc: 'Python, Node.js and Go jobs processing and validating FTP, SFTP, CSV, Excel and log data, then aggregating KPIs from 15-min to monthly intervals', tag: 'Pipeline' },
+        { title: 'Data Pipeline', desc: 'Python, Javascript (NodeJS) and Go jobs processing and validating FTP, SFTP, CSV, Excel and log data, then aggregating KPIs from 15-min to monthly intervals', tag: 'Pipeline' },
         { title: 'PostgreSQL Architecture', desc: 'Integrated PostgreSQL databases with time-series partitioning, multi-interval KPI aggregation and materialized views', tag: 'Storage' },
         { title: 'Redis Cache Layer', desc: 'In-memory fast retrieval for 15+ operational KPIs and health snapshots', tag: 'Cache' },
         { title: 'Reporting APIs', desc: 'Multiple analytical endpoints powering monitoring, reporting and dashboard applications', tag: 'Delivery' }
@@ -99,7 +99,7 @@ export const PROJECTS_DATA_EN: Project[] = [
       { label: 'Data Operations', value: 'Full CRUD', desc: 'Create, read, update, delete listings' },
       { label: 'Device Support', value: 'Responsive', desc: 'Mobile and desktop ready' }
     ],
-    stack: ['ReactJS', 'JavaScript', 'HTML', 'CSS', 'REST API', 'Authentication', 'CRUD'],
+    stack: ['ReactJS', 'JavaScript', 'HTML', 'CSS', 'REST API', 'Authentication', 'Admin CPanel', 'UI/UX Design'],
     architecture: {
       flowDescription: 'A React-based web application that provides public job browsing features and authenticated administrative functionality for managing job listings.',
       steps: [
@@ -153,7 +153,7 @@ export const PROJECTS_DATA_EN: Project[] = [
       { label: 'Database', value: 'PostgreSQL', desc: 'ACID-compliant attendance ledger' },
       { label: 'Workflows', value: 'Leave & Sick', desc: 'Integrated approval workflows' }
     ],
-    stack: ['CodeIgniter 3', 'PHP', 'JavaScript', 'jQuery', 'Bootstrap 3', 'DataTables', 'PostgreSQL', 'Apache', 'Google Maps API', 'MinIO'],
+    stack: ['CodeIgniter 3', 'JavaScript', 'jQuery', 'Bootstrap 3', 'DataTables', 'PostgreSQL', 'Apache', 'Google Maps API', 'MinIO'],
     architecture: {
       flowDescription: 'The system consists of an employee-facing attendance application and an administrative management application connected to shared backend services and PostgreSQL data. Attendance transactions use location validation and selfie uploads, while MinIO provides object storage for attendance photos.',
       steps: [
@@ -274,7 +274,7 @@ export const PROJECTS_DATA_EN: Project[] = [
       { label: 'Backend Engine', value: 'Bun + Elysia', desc: 'High-throughput TypeScript runtime' },
       { label: 'EWS Engine', value: 'LLM Assisted', desc: 'Early warning anomaly alerts' }
     ],
-    stack: ['Svelte', 'TailwindCSS', 'Google Maps API', 'Elysia', 'Bun', 'Prisma', 'PostgreSQL', 'Redis', 'JWT', 'Swagger', 'LLM'],
+    stack: ['Svelte', 'TailwindCSS', 'Google Maps API', 'Elysia', 'Bun', 'Prisma', 'PostgreSQL', 'Redis', 'AI/LLM Predictive Models', 'Ubuntu Server'],
     architecture: {
       flowDescription: 'AQMS sensor data is processed and served through backend APIs to the interactive dashboard, where real-time measurements are visualized on charts and maps. AI/LLM-based processing is used for data modeling, forecasting and Early Warning System (EWS) visualization.',
       steps: [
@@ -326,7 +326,7 @@ export const PROJECTS_DATA_EN: Project[] = [
       { label: 'Reliability', value: 'Production SLA', desc: 'Zero disruption during feature updates' },
       { label: 'Security', value: 'RBAC', desc: 'Role-based access permissions' }
     ],
-    stack: ['Web Application', 'PHP', 'MySQL', 'JavaScript', 'Bootstrap', 'REST API'],
+    stack: ['Web Application', 'CodeIgniter', 'MySQL', 'JavaScript', 'Bootstrap', 'REST API'],
     architecture: {
       flowDescription: 'Web-based ERP application supporting business and operational processes through integrated modules and features.',
       steps: [
@@ -380,7 +380,7 @@ export const PROJECTS_DATA_EN: Project[] = [
       { label: 'Complexity', value: 'O(n) → O(1)', desc: 'Optimized algorithmic data access' },
       { label: 'N+1 Queries', value: '0 Loop Calls', desc: 'Eliminated redundant relational lookups' }
     ],
-    stack: ['CodeIgniter 4', 'PHP', 'MySQL', 'Database Indexing', 'Query Optimization'],
+    stack: ['CodeIgniter', 'PHP', 'MySQL', 'Database Indexing', 'Query Optimization'],
     architecture: {
       flowDescription: 'AQMS monitoring data is retrieved through backend APIs and processed using CodeIgniter 4 before being delivered to the web dashboard. Performance bottlenecks were addressed through query optimization, improved data access strategies, and database indexing.',
       steps: [
@@ -490,7 +490,7 @@ export const PROJECTS_DATA_EN: Project[] = [
       { label: 'AI Response', value: 'SSE Streaming', desc: 'Real-time interactive token stream' },
       { label: 'Production Ops', value: 'PM2 + Nginx', desc: 'Linux deployment with CI/CD' }
     ],
-    stack: ['Python', 'FastAPI', 'REST API', 'Microservices', 'PostgreSQL', 'LLM', 'RAG', 'Vector Database', 'ChromaDB', 'Ollama', 'CI/CD', 'Linux', 'PM2', 'Nginx'],
+    stack: ['Python', 'FastAPI', 'Microservices', 'PostgreSQL', 'AI/LLM Model', 'RAG', 'Vector Database', 'CI/CD', 'Linux', 'PM2', 'Nginx'],
     architecture: {
       flowDescription: 'Caltax uses a microservices architecture where user management, master data, tax processing, and AI functionality are handled by separate services communicating through APIs to deliver unified workflows.',
       steps: [
@@ -565,7 +565,7 @@ export const PROJECTS_DATA_EN: Project[] = [
       { label: 'Platform Type', value: 'Cloud SaaS', desc: 'Multi-tenant web architecture' },
       { label: 'Status', value: 'Active Dev', desc: 'Live deployment on Vercel' }
     ],
-    stack: ['React', 'Node.js', 'JavaScript', 'TailwindCSS', 'REST API', 'SaaS Architecture'],
+    stack: ['ReactJS', 'Typescript', 'TailwindCSS', 'ExpressJS', 'Supabase', 'Vite'],
     architecture: {
       flowDescription: 'The SaaS POS platform digitizes day-to-day sales operations for small F&B businesses through a centralized, responsive web application.',
       steps: [
@@ -623,7 +623,7 @@ export const PROJECTS_DATA_EN: Project[] = [
       { label: 'Platform Scope', value: 'Hospitality', desc: 'Stays, dining, and retreat events' },
       { label: 'Status', value: 'Active Dev', desc: 'Live web deployment on Vercel' }
     ],
-    stack: ['Vue.js', 'Express.js', 'JavaScript', 'Node.js', 'TailwindCSS', 'REST API'],
+    stack: ['ReactJS', 'Typescript', 'TailwindCSS', 'ExpressJS', 'Supabase', 'Vite'],
     architecture: {
       flowDescription: 'The Suka Village platform uses a full-stack architecture with a Vue.js frontend communicating with an Express.js backend through REST APIs to serve dynamic destination catalogs.',
       steps: [
@@ -633,11 +633,11 @@ export const PROJECTS_DATA_EN: Project[] = [
       ]
     },
     liveUrl: 'https://sukavillage-v7.vercel.app/',
-    imageUrl: 'https://images.unsplash.com/photo-1566073771259-6a8506099945?auto=format&fit=crop&w=1200&q=80',
+    imageUrl: '/assets/projects/sukavillage.png',
     screenshots: [
-      { title: 'Villa Lodging & Accommodation Catalog', url: 'https://images.unsplash.com/photo-1566073771259-6a8506099945?auto=format&fit=crop&w=1200&q=80', caption: 'Visual gallery with amenity breakdowns, guest capacity limits, and pricing' },
-      { title: 'Restaurant Dining & Outdoor Activities', url: 'https://images.unsplash.com/photo-1517248135467-4c7edcad34c4?auto=format&fit=crop&w=1200&q=80', caption: 'Culinary dining selections and corporate retreat packages' },
-      { title: 'Private Event Reservation Request Form', url: 'https://images.unsplash.com/photo-1522071820081-009f0129c71c?auto=format&fit=crop&w=1200&q=80', caption: 'Inquiry and scheduling workflow for weddings and group gatherings' }
+      { title: 'Villa Lodging & Accommodation Catalog', url: '/assets/projects/sukavillage-villa.png', caption: 'Visual gallery with amenity breakdowns, guest capacity limits, and pricing' },
+      { title: 'Restaurant Dining & Outdoor Activities', url: '/assets/projects/sukavillage-restaurant.png', caption: 'Culinary dining selections and corporate retreat packages' },
+      { title: 'Private Event Reservation Request Form', url: '/assets/projects/sukavillage-event.png', caption: 'Inquiry and scheduling workflow for weddings and group gatherings' }
     ],
     downloads: {
       primary: { label: 'Download Suka Village Specs (.md)', type: 'spec' },
