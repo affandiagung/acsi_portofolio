@@ -498,7 +498,7 @@ export const PROJECTS_DATA_EN: Project[] = [
         { title: 'Master Service', desc: 'Provides master rates, reference data, and requirement matrices for taxation workflows', tag: 'Master Data' },
         { title: 'Tax Service', desc: 'Processes input data and executes primary tax computation and business logic', tag: 'Computation' },
         { title: 'AI Service', desc: 'RAG-based AI assistant retrieves relevant tax legal knowledge and generates contextual responses', tag: 'AI / RAG' },
-        { title: 'AI Knowledge Layer', desc: 'Uses document embeddings with ChromaDB and LLM to ensure accurate citation', tag: 'Knowledge Base' }
+        { title: 'AI Knowledge Layer', desc: 'Uses document embeddings with LLM Model to ensure accurate citation', tag: 'Knowledge Base' }
       ]
     },
     applications: [

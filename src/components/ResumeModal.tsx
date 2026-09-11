@@ -180,7 +180,7 @@ export const ResumeModal: React.FC<ResumeModalProps> = ({ isOpen, onClose, data 
               <div className="space-y-1.5 text-xs text-slate-700 dark:text-slate-300 print:text-slate-800">
                 <div><strong className="text-slate-900 dark:text-slate-200 print:text-black">{language === 'id' ? 'Bahasa Pemrograman:' : 'Languages:'}</strong> TypeScript, JavaScript, PHP, Python, SQL</div>
                 <div><strong className="text-slate-900 dark:text-slate-200 print:text-black">Backend:</strong> Python (FastAPI), Laravel, CodeIgniter, Node.js (NestJS, Express), Bun, RESTful APIs, OpenAPI</div>
-                <div><strong className="text-slate-900 dark:text-slate-200 print:text-black">Databases & Caching:</strong> PostgreSQL, MySQL, Redis, MongoDB, ChromaDB (Vector DB), Prisma ORM</div>
+                <div><strong className="text-slate-900 dark:text-slate-200 print:text-black">Databases & Caching:</strong> PostgreSQL, MySQL, Redis, MongoDB, Prisma ORM</div>
                 <div><strong className="text-slate-900 dark:text-slate-200 print:text-black">{language === 'id' ? 'Solusi Bisnis & Web:' : 'Business & Web Solutions:'}</strong> ERP System Customization, POS SaaS UMKM, E-Commerce, Landing Pages (SukaVillage)</div>
                 <div><strong className="text-slate-900 dark:text-slate-200 print:text-black">{language === 'id' ? 'Server & Maintenance:' : 'Server & Maintenance:'}</strong> AWS, IDCloudHost, Linux VPS, Nginx, Docker, System Monitoring, Bug Fixing & Hotpatching</div>
               </div>

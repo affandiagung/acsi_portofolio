@@ -190,7 +190,7 @@ export const ProjectVisual: React.FC<ProjectVisualProps> = ({ project, mode = 't
                 FastAPI Tax RAG Engine
               </span>
               <span className="text-[9px] font-mono bg-purple-500/20 text-purple-300 border border-purple-500/30 px-1.5 py-0.2 rounded">
-                ChromaDB + Ollama
+                LLM Model
               </span>
             </div>
             <span className="text-[10px] font-mono text-emerald-400">SSE Stream: &lt;350ms</span>

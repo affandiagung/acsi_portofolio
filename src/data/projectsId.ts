@@ -509,7 +509,7 @@ export const PROJECTS_DATA_ID: Project[] = [
         { title: 'Master Service', desc: 'Menyediakan tarif master, data referensi, dan matriks persyaratan perhitungan pajak', tag: 'Master Data' },
         { title: 'Tax Service', desc: 'Memproses data input dan mengeksekusi komputasi serta logika bisnis utama perpajakan', tag: 'Komputasi' },
         { title: 'AI Service', desc: 'Asisten AI berbasis RAG mencari pengetahuan hukum pajak terkait dan menyusun jawaban kontekstual', tag: 'AI / RAG' },
-        { title: 'Lapisan Knowledge AI', desc: 'Menggunakan embeddings dokumen dengan ChromaDB dan LLM untuk memastikan kutipan pasal akurat', tag: 'Basis Pengetahuan' }
+        { title: 'Lapisan Knowledge AI', desc: 'Menggunakan embeddings dokumen dengan LLM Model untuk memastikan kutipan pasal akurat', tag: 'Basis Pengetahuan' }
       ]
     },
     applications: [

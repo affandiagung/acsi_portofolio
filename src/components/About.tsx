@@ -83,7 +83,7 @@ export const About: React.FC<AboutProps> = ({ data }) => {
                 </div>
                 <div className="flex justify-between py-1 border-b border-slate-200 dark:border-slate-800/40">
                   <span className="text-slate-500 dark:text-slate-400">{t('about.databasesLabel')}</span>
-                  <span className="font-semibold text-slate-900 dark:text-slate-200">PostgreSQL, MySQL, Redis, ChromaDB</span>
+                  <span className="font-semibold text-slate-900 dark:text-slate-200">PostgreSQL, MySQL, Redis</span>
                 </div>
                 <div className="flex justify-between py-1 border-b border-slate-200 dark:border-slate-800/40">
                   <span className="text-slate-500 dark:text-slate-400">{t('about.locationLabel')}</span>

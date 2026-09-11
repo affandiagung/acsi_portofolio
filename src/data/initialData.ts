@@ -113,7 +113,7 @@ export const INITIAL_PORTFOLIO_DATA_EN: PortfolioData = {
       description: 'Building production AI features that ground LLMs in structured domain documents with zero hallucinations.',
       items: [
         'FastAPI & Python microservices for domain-specific AI workloads',
-        'Retrieval-Augmented Generation (RAG) with ChromaDB & Ollama local fallback',
+        'Retrieval-Augmented Generation (RAG) with LLM Model',
         'Indonesian tax regulations RAG assistant with semantic legal chunking',
         'Server-Sent Events (SSE) streaming APIs for real-time conversational UIs',
         'Hybrid keyword (BM25) and dense vector embeddings matching'
@@ -320,7 +320,6 @@ CMD ["uvicorn", "main:app", "--host", "0.0.0.0", "--port", "8000", "--workers", 
         { name: 'SQL (PostgreSQL , MySQL / MariaDB, SQLite)', highlight: true },
         { name: 'NoSQL ( MongoDB )', highlight: true },
         { name: 'Redis (Caching & Queues)', highlight: true },
-        { name: 'ChromaDB (Vector DB)', highlight: true },
         { name: 'Prisma ORM & Eloquent', highlight: true },
         { name: 'Query Optimization (EXPLAIN)', highlight: true }
       ]
@@ -504,7 +503,7 @@ This guarantees only 1 request queries the database while others wait briefly fo
     },
     {
       id: 'note-rag-fastapi',
-      title: 'Building a Production RAG API with FastAPI, ChromaDB, and Streaming Responses',
+      title: 'Building a Production RAG API with FastAPI,LLM Model, and Streaming Responses',
       date: 'Jan 2025',
       readTime: '7 min read',
       tags: ['AI', 'Python', 'FastAPI', 'RAG'],
@@ -522,7 +521,7 @@ We wrote a regex-based parser that preserves complete articles as single documen
 - \`tax_type\`: PPh Orang Pribadi
 - \`valid_from_year\`: 2022
 
-### 3. Hybrid Filtering in ChromaDB
+### 3. Hybrid Filtering in the RAG Pipeline
 When the user asks: "What is the PPh rate for income above 5 billion in 2024?", we perform a hybrid query:
 \`\`\`python
 results = collection.query(

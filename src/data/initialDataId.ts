@@ -267,7 +267,6 @@ def hybrid_retrieve(query: str, top_k: int = 5):
         { name: 'SQL (PostgreSQL, MySQL / MariaDB, SQLite)', highlight: true },
         { name: 'NoSQL (MongoDB)', highlight: true },
         { name: 'Redis (Caching & Queues)', highlight: true },
-        { name: 'ChromaDB (Vector Database)', highlight: true },
         { name: 'Prisma ORM & Eloquent', highlight: true },
         { name: 'Optimasi Query (EXPLAIN)', highlight: true }
       ]
@@ -442,13 +441,13 @@ Server VPS baru yang tersambung ke IP publik sering kali mulai menerima serangan
       title: 'Merancang Hybrid RAG untuk Asisten Hukum & Pajak Tanpa Halusinasi',
       date: 'Desember 2025',
       readTime: '7 menit baca',
-      tags: ['AI', 'RAG', 'Python', 'FastAPI', 'ChromaDB'],
+      tags: ['AI/LLM Model', 'RAG', 'Python', 'FastAPI'],
       summary: 'Mengapa semantic search vektor saja tidak cukup untuk dokumen perundang-undangan dan bagaimana menggabungkannya dengan BM25 serta Cross-Encoder Reranking.',
       content: `### Kelemahan Dense Vector Search Murni pada Teks Hukum
 Pencarian vektor (Dense Retrieval) sangat handal menangkap arti semantik secara umum, namun sering gagal ketika user mencari pasal spesifik seperti *"Pasal 21 ayat 5 huruf b UU KUP"*. Nilai embedding sering tertukar dengan pasal lain yang memiliki tema serupa.
 
 ### Solusi: Arsitektur Hybrid RAG
-1. **Dense Retrieval (ChromaDB / OpenAI Ada):** Menangkap kemiripan konsep hukum dan konteks pertanyaan.
+1. **Dense Retrieval (LLM Model / OpenAI):** Menangkap kemiripan konsep hukum dan konteks pertanyaan.
 2. **Sparse Retrieval (BM25):** Menjamin kecocokan tepat pada kata kunci istilah perpajakan dan nomor pasal tertentu.
 3. **Penyatuan Skor (Reciprocal Rank Fusion):** Menggabungkan 20 kandidat teratas dari masing-masing pencari.
 4. **Cross-Encoder Reranking:** Model reranker menilai relevansi pasangan (Pertanyaan, Teks Potongan) dan mengambil 5 potongan dokumen paling akurat untuk diserahkan ke prompt LLM.
